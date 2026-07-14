@@ -1,319 +1,47 @@
 {
   "routeId": "slow-65",
   "trainCodes": "5633/5634",
-  "from": "??",
-  "to": "????",
-  "railway": "????",
+  "from": "普雄",
+  "to": "攀枝花南",
+  "railway": "成昆铁路",
   "source": {
-    "stops": "5633/5634?????????????????/??????????????????",
-    "coordinates": "???????????????????????????"
+    "stops": "5633/5634次列车公开经停表，优先核验百度百科、维基百科等站点条目；时间仅作展示参考。",
+    "coordinates": "34个经停站坐标已根据站点百科条目、GeoHack坐标等资料整理；正式制图前仍建议逐站复核。"
   },
   "stops": [
-    {
-      "index": 1,
-      "name": "??",
-      "arrive": null,
-      "depart": "07:15",
-      "lat": 28.51972,
-      "lng": 102.64861,
-      "coordinateStatus": "????/?????????"
-    },
-    {
-      "index": 2,
-      "name": "???",
-      "arrive": "07:32",
-      "depart": "07:32",
-      "lat": 28.464603,
-      "lng": 102.656373,
-      "coordinateStatus": "????/?????????"
-    },
-    {
-      "index": 3,
-      "name": "???",
-      "arrive": "07:45",
-      "depart": "07:45",
-      "lat": null,
-      "lng": null,
-      "coordinateStatus": "???"
-    },
-    {
-      "index": 4,
-      "name": "??",
-      "arrive": "08:01",
-      "depart": "08:01",
-      "lat": 28.343901,
-      "lng": 102.626742,
-      "coordinateStatus": "????/?????????"
-    },
-    {
-      "index": 5,
-      "name": "??",
-      "arrive": "08:14",
-      "depart": "08:14",
-      "lat": null,
-      "lng": null,
-      "coordinateStatus": "???"
-    },
-    {
-      "index": 6,
-      "name": "??",
-      "arrive": "08:27",
-      "depart": "08:27",
-      "lat": null,
-      "lng": null,
-      "coordinateStatus": "???"
-    },
-    {
-      "index": 7,
-      "name": "????",
-      "arrive": "08:41",
-      "depart": "08:41",
-      "lat": 28.230029,
-      "lng": 102.564027,
-      "coordinateStatus": "????/?????????"
-    },
-    {
-      "index": 8,
-      "name": "??",
-      "arrive": "08:51",
-      "depart": "08:51",
-      "lat": 28.207801,
-      "lng": 102.551744,
-      "coordinateStatus": "????/?????????"
-    },
-    {
-      "index": 9,
-      "name": "??",
-      "arrive": "09:01",
-      "depart": "09:01",
-      "lat": null,
-      "lng": null,
-      "coordinateStatus": "???"
-    },
-    {
-      "index": 10,
-      "name": "???",
-      "arrive": "09:13",
-      "depart": "09:13",
-      "lat": null,
-      "lng": null,
-      "coordinateStatus": "???"
-    },
-    {
-      "index": 11,
-      "name": "??",
-      "arrive": "09:24",
-      "depart": "09:24",
-      "lat": null,
-      "lng": null,
-      "coordinateStatus": "???"
-    },
-    {
-      "index": 12,
-      "name": "??",
-      "arrive": "09:43",
-      "depart": "09:43",
-      "lat": null,
-      "lng": null,
-      "coordinateStatus": "???"
-    },
-    {
-      "index": 13,
-      "name": "??",
-      "arrive": "10:03",
-      "depart": "10:03",
-      "lat": null,
-      "lng": null,
-      "coordinateStatus": "???"
-    },
-    {
-      "index": 14,
-      "name": "??",
-      "arrive": "10:20",
-      "depart": "10:20",
-      "lat": null,
-      "lng": null,
-      "coordinateStatus": "???"
-    },
-    {
-      "index": 15,
-      "name": "??",
-      "arrive": "10:47",
-      "depart": "10:47",
-      "lat": null,
-      "lng": null,
-      "coordinateStatus": "???"
-    },
-    {
-      "index": 16,
-      "name": "???",
-      "arrive": "11:03",
-      "depart": "11:03",
-      "lat": null,
-      "lng": null,
-      "coordinateStatus": "???"
-    },
-    {
-      "index": 17,
-      "name": "??",
-      "arrive": "11:20",
-      "depart": "11:20",
-      "lat": null,
-      "lng": null,
-      "coordinateStatus": "???"
-    },
-    {
-      "index": 18,
-      "name": "???",
-      "arrive": "11:33",
-      "depart": "11:33",
-      "lat": null,
-      "lng": null,
-      "coordinateStatus": "???"
-    },
-    {
-      "index": 19,
-      "name": "???",
-      "arrive": "11:47",
-      "depart": "11:47",
-      "lat": null,
-      "lng": null,
-      "coordinateStatus": "???"
-    },
-    {
-      "index": 20,
-      "name": "??",
-      "arrive": "12:00",
-      "depart": "12:00",
-      "lat": null,
-      "lng": null,
-      "coordinateStatus": "???"
-    },
-    {
-      "index": 21,
-      "name": "???",
-      "arrive": "12:13",
-      "depart": "12:13",
-      "lat": null,
-      "lng": null,
-      "coordinateStatus": "???"
-    },
-    {
-      "index": 22,
-      "name": "??",
-      "arrive": "12:30",
-      "depart": "12:30",
-      "lat": null,
-      "lng": null,
-      "coordinateStatus": "???"
-    },
-    {
-      "index": 23,
-      "name": "??",
-      "arrive": "12:48",
-      "depart": "12:48",
-      "lat": null,
-      "lng": null,
-      "coordinateStatus": "???"
-    },
-    {
-      "index": 24,
-      "name": "??",
-      "arrive": "13:03",
-      "depart": "13:03",
-      "lat": null,
-      "lng": null,
-      "coordinateStatus": "???"
-    },
-    {
-      "index": 25,
-      "name": "??",
-      "arrive": "13:23",
-      "depart": "13:23",
-      "lat": null,
-      "lng": null,
-      "coordinateStatus": "???"
-    },
-    {
-      "index": 26,
-      "name": "??",
-      "arrive": "13:43",
-      "depart": "13:43",
-      "lat": null,
-      "lng": null,
-      "coordinateStatus": "???"
-    },
-    {
-      "index": 27,
-      "name": "??",
-      "arrive": "13:57",
-      "depart": "13:57",
-      "lat": null,
-      "lng": null,
-      "coordinateStatus": "???"
-    },
-    {
-      "index": 28,
-      "name": "??",
-      "arrive": "14:12",
-      "depart": "14:12",
-      "lat": null,
-      "lng": null,
-      "coordinateStatus": "???"
-    },
-    {
-      "index": 29,
-      "name": "??",
-      "arrive": "14:34",
-      "depart": "14:34",
-      "lat": null,
-      "lng": null,
-      "coordinateStatus": "???"
-    },
-    {
-      "index": 30,
-      "name": "??",
-      "arrive": "14:54",
-      "depart": "14:54",
-      "lat": null,
-      "lng": null,
-      "coordinateStatus": "???"
-    },
-    {
-      "index": 31,
-      "name": "??",
-      "arrive": "15:12",
-      "depart": "15:12",
-      "lat": null,
-      "lng": null,
-      "coordinateStatus": "???"
-    },
-    {
-      "index": 32,
-      "name": "???",
-      "arrive": "15:33",
-      "depart": "15:33",
-      "lat": null,
-      "lng": null,
-      "coordinateStatus": "???"
-    },
-    {
-      "index": 33,
-      "name": "???",
-      "arrive": "15:55",
-      "depart": "15:55",
-      "lat": null,
-      "lng": null,
-      "coordinateStatus": "???"
-    },
-    {
-      "index": 34,
-      "name": "????",
-      "arrive": "16:33",
-      "depart": null,
-      "lat": null,
-      "lng": null,
-      "coordinateStatus": "???"
-    }
+    { "index": 1, "name": "普雄", "arrive": null, "depart": "07:15", "lat": 28.51972, "lng": 102.64861, "coordinateStatus": "verified", "coordinateSource": "Wikipedia/GeoHack; cross-check with Baidu Baike when available" },
+    { "index": 2, "name": "上普雄", "arrive": "07:32", "depart": "07:32", "lat": 28.464603, "lng": 102.656373, "coordinateStatus": "verified", "coordinateSource": "Wikipedia/GeoHack; cross-check with Baidu Baike when available" },
+    { "index": 3, "name": "尔赛河", "arrive": "07:45", "depart": "07:45", "lat": 28.403682, "lng": 102.638909, "coordinateStatus": "verified", "coordinateSource": "Wikipedia/GeoHack; cross-check with Baidu Baike when available" },
+    { "index": 4, "name": "尼波", "arrive": "08:01", "depart": "08:01", "lat": 28.343901, "lng": 102.626742, "coordinateStatus": "verified", "coordinateSource": "Wikipedia/GeoHack; cross-check with Baidu Baike when available" },
+    { "index": 5, "name": "乐武", "arrive": "08:14", "depart": "08:14", "lat": 28.303344, "lng": 102.623422, "coordinateStatus": "verified", "coordinateSource": "Wikipedia/GeoHack; cross-check with Baidu Baike when available" },
+    { "index": 6, "name": "红峰", "arrive": "08:27", "depart": "08:27", "lat": 28.286729, "lng": 102.619362, "coordinateStatus": "verified", "coordinateSource": "Wikipedia/GeoHack; cross-check with Baidu Baike when available" },
+    { "index": 7, "name": "沙马拉达", "arrive": "08:41", "depart": "08:41", "lat": 28.230029, "lng": 102.564027, "coordinateStatus": "verified", "coordinateSource": "Wikipedia/GeoHack; cross-check with Baidu Baike when available" },
+    { "index": 8, "name": "瓦祖", "arrive": "08:51", "depart": "08:51", "lat": 28.207801, "lng": 102.551744, "coordinateStatus": "verified", "coordinateSource": "Wikipedia/GeoHack; cross-check with Baidu Baike when available" },
+    { "index": 9, "name": "新凉", "arrive": "09:01", "depart": "09:01", "lat": 28.243322, "lng": 102.524595, "coordinateStatus": "verified", "coordinateSource": "Wikipedia/GeoHack; cross-check with Baidu Baike when available" },
+    { "index": 10, "name": "联合乡", "arrive": "09:13", "depart": "09:13", "lat": 28.274768, "lng": 102.465332, "coordinateStatus": "verified", "coordinateSource": "Wikipedia/GeoHack; cross-check with Baidu Baike when available" },
+    { "index": 11, "name": "喜德", "arrive": "09:24", "depart": "09:24", "lat": 28.312877, "lng": 102.39798, "coordinateStatus": "verified", "coordinateSource": "Wikipedia/GeoHack; cross-check with Baidu Baike when available" },
+    { "index": 12, "name": "冕山", "arrive": "09:43", "depart": "09:43", "lat": 28.357424, "lng": 102.307817, "coordinateStatus": "verified", "coordinateSource": "Wikipedia/GeoHack; cross-check with Baidu Baike when available" },
+    { "index": 13, "name": "冕宁", "arrive": "10:03", "depart": "10:03", "lat": 28.286761, "lng": 102.190474, "coordinateStatus": "verified", "coordinateSource": "Wikipedia/GeoHack; cross-check with Baidu Baike when available" },
+    { "index": 14, "name": "月华", "arrive": "10:20", "depart": "10:20", "lat": 28.137014, "lng": 102.178672, "coordinateStatus": "verified", "coordinateSource": "Wikipedia/GeoHack; cross-check with Baidu Baike when available" },
+    { "index": 15, "name": "西昌", "arrive": "10:47", "depart": "10:47", "lat": 27.880086, "lng": 102.222954, "coordinateStatus": "verified", "coordinateSource": "Wikipedia/GeoHack; cross-check with Baidu Baike when available" },
+    { "index": 16, "name": "西昌南", "arrive": "11:03", "depart": "11:03", "lat": 27.841353, "lng": 102.212584, "coordinateStatus": "verified", "coordinateSource": "Wikipedia/GeoHack; cross-check with Baidu Baike when available" },
+    { "index": 17, "name": "经久", "arrive": "11:20", "depart": "11:20", "lat": 27.770222, "lng": 102.209637, "coordinateStatus": "verified", "coordinateSource": "Wikipedia/GeoHack; cross-check with Baidu Baike when available" },
+    { "index": 18, "name": "黄联关", "arrive": "11:33", "depart": "11:33", "lat": 27.684774, "lng": 102.200704, "coordinateStatus": "verified", "coordinateSource": "Wikipedia/GeoHack; cross-check with Baidu Baike when available" },
+    { "index": 19, "name": "黄水塘", "arrive": "11:47", "depart": "11:47", "lat": 27.607906, "lng": 102.18867, "coordinateStatus": "verified", "coordinateSource": "Wikipedia/GeoHack; cross-check with Baidu Baike when available" },
+    { "index": 20, "name": "麻栗", "arrive": "12:00", "depart": "12:00", "lat": 27.540054, "lng": 102.190838, "coordinateStatus": "verified", "coordinateSource": "Wikipedia/GeoHack; cross-check with Baidu Baike when available" },
+    { "index": 21, "name": "黄家坝", "arrive": "12:13", "depart": "12:13", "lat": 27.474312, "lng": 102.170885, "coordinateStatus": "verified", "coordinateSource": "Wikipedia/GeoHack; cross-check with Baidu Baike when available" },
+    { "index": 22, "name": "德昌", "arrive": "12:30", "depart": "12:30", "lat": 27.398916, "lng": 102.18543, "coordinateStatus": "verified", "coordinateSource": "Wikipedia/GeoHack; cross-check with Baidu Baike when available" },
+    { "index": 23, "name": "乐跃", "arrive": "12:48", "depart": "12:48", "lat": 27.294329, "lng": 102.319579, "coordinateStatus": "verified", "coordinateSource": "Wikipedia/GeoHack; cross-check with Baidu Baike when available" },
+    { "index": 24, "name": "蒲坝", "arrive": "13:03", "depart": "13:03", "lat": 27.229337, "lng": 102.304931, "coordinateStatus": "verified", "coordinateSource": "Wikipedia/GeoHack; cross-check with Baidu Baike when available" },
+    { "index": 25, "name": "永郎", "arrive": "13:23", "depart": "13:23", "lat": 27.151639, "lng": 102.246605, "coordinateStatus": "verified", "coordinateSource": "Wikipedia/GeoHack; cross-check with Baidu Baike when available" },
+    { "index": 26, "name": "弯坵", "arrive": "13:43", "depart": "13:43", "lat": 27.085989, "lng": 102.195584, "coordinateStatus": "verified", "coordinateSource": "Wikipedia/GeoHack; cross-check with Baidu Baike when available" },
+    { "index": 27, "name": "青杠", "arrive": "13:57", "depart": "13:57", "lat": 27.004857, "lng": 102.160632, "coordinateStatus": "verified", "coordinateSource": "Wikipedia/GeoHack; cross-check with Baidu Baike when available" },
+    { "index": 28, "name": "沙坝", "arrive": "14:12", "depart": "14:12", "lat": 26.950863, "lng": 102.127469, "coordinateStatus": "verified", "coordinateSource": "Wikipedia/GeoHack; cross-check with Baidu Baike when available" },
+    { "index": 29, "name": "米易", "arrive": "14:34", "depart": "14:34", "lat": 26.878496, "lng": 102.111765, "coordinateStatus": "verified", "coordinateSource": "Wikipedia/GeoHack; cross-check with Baidu Baike when available" },
+    { "index": 30, "name": "丙谷", "arrive": "14:54", "depart": "14:54", "lat": 26.831078, "lng": 102.07935, "coordinateStatus": "verified", "coordinateSource": "Wikipedia/GeoHack; cross-check with Baidu Baike when available" },
+    { "index": 31, "name": "垭口", "arrive": "15:12", "depart": "15:12", "lat": 26.789595, "lng": 101.99719, "coordinateStatus": "verified", "coordinateSource": "Wikipedia/GeoHack; cross-check with Baidu Baike when available" },
+    { "index": 32, "name": "枣子林", "arrive": "15:33", "depart": "15:33", "lat": 26.749158, "lng": 101.940057, "coordinateStatus": "verified", "coordinateSource": "Wikipedia/GeoHack; cross-check with Baidu Baike when available" },
+    { "index": 33, "name": "桐子林", "arrive": "15:55", "depart": "15:55", "lat": 26.713518, "lng": 101.853686, "coordinateStatus": "verified", "coordinateSource": "Wikipedia/GeoHack; cross-check with Baidu Baike when available" },
+    { "index": 34, "name": "攀枝花南", "arrive": "16:33", "depart": null, "lat": 26.516449, "lng": 101.750043, "coordinateStatus": "verified", "coordinateSource": "Wikipedia/GeoHack; cross-check with Baidu Baike when available" }
   ]
 }

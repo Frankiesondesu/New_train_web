@@ -653,15 +653,15 @@
     {
       "id": "slow-65",
       "trainCodes": "5633/5634",
-      "from": "??",
-      "to": "???",
-      "railway": "????",
-      "region": "??",
-      "category": "?????",
-      "note": "????????????????????????????????????",
+      "from": "普雄",
+      "to": "攀枝花南",
+      "railway": "成昆铁路",
+      "region": "四川",
+      "category": "公益慢火车",
+      "note": "公益性普速慢火车，服务沿线通勤、就医、赶集和乡村出行。",
       "stopsFile": "stops/slow-65.json",
       "stopCount": 34,
-      "coordinateCompleteness": "5/34"
+      "coordinateCompleteness": "34/34"
     },
     {
       "id": "slow-66",

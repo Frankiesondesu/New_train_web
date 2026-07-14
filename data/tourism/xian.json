@@ -1,0 +1,37 @@
+{
+  "stationId": "xian",
+  "attractions": [
+    {
+      "name": "西安城墙",
+      "description": "骑行在完整古城垣之上",
+      "rating": "4.8",
+      "distance": "13 km",
+      "image": "https://images.unsplash.com/photo-1591123720164-de1348028a82?auto=format&fit=crop&w=500&q=80"
+    },
+    {
+      "name": "大唐不夜城",
+      "description": "盛唐主题步行街夜游",
+      "rating": "4.7",
+      "distance": "20 km",
+      "image": "https://images.unsplash.com/photo-1627624676456-63a20c7b12bd?auto=format&fit=crop&w=500&q=80"
+    }
+  ],
+  "scenery": [
+    {
+      "name": "近郊风景",
+      "description": "适合半日或一日的自然之旅",
+      "rating": "推荐",
+      "distance": "近郊",
+      "image": "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=500&q=80"
+    }
+  ],
+  "stays": [
+    {
+      "name": "车站精选住宿",
+      "description": "交通便利，适合铁路旅行者",
+      "rating": "¥380起",
+      "distance": "3 km内",
+      "image": "https://images.unsplash.com/photo-1566665797739-1674de7a421a?auto=format&fit=crop&w=500&q=80"
+    }
+  ]
+}

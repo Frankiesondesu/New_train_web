@@ -1,0 +1,37 @@
+{
+  "stationId": "chengdu",
+  "attractions": [
+    {
+      "name": "成都大熊猫基地",
+      "description": "看大熊猫晨间活动",
+      "rating": "4.8",
+      "distance": "17 km",
+      "image": "https://images.unsplash.com/photo-1564349683136-77e08dba1ef7?auto=format&fit=crop&w=500&q=80"
+    },
+    {
+      "name": "宽窄巷子",
+      "description": "老成都院落与市井生活",
+      "rating": "4.5",
+      "distance": "12 km",
+      "image": "https://images.unsplash.com/photo-1545893835-abaa50cbe628?auto=format&fit=crop&w=500&q=80"
+    }
+  ],
+  "scenery": [
+    {
+      "name": "近郊风景",
+      "description": "适合半日或一日的自然之旅",
+      "rating": "推荐",
+      "distance": "近郊",
+      "image": "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=500&q=80"
+    }
+  ],
+  "stays": [
+    {
+      "name": "太古里设计酒店",
+      "description": "城市中心的现代川西体验",
+      "rating": "¥860起",
+      "distance": "8 km",
+      "image": "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=500&q=80"
+    }
+  ]
+}

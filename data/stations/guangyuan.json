@@ -1,0 +1,48 @@
+{
+  "id": "guangyuan",
+  "name": "广元站",
+  "lat": 32.44,
+  "lng": 105.84,
+  "tag": "蜀道门户",
+  "description": "循着剑门蜀道，进入层叠山川。",
+  "aliases": [
+    "??",
+    "guangyuan",
+    "gy"
+  ],
+  "routeIds": [
+    "xicheng"
+  ],
+  "stoppingTrains": [
+    {
+      "routeId": "xicheng",
+      "no": "D1915",
+      "from": "西安北",
+      "to": "成都东",
+      "depart": "08:50",
+      "arrive": "12:11",
+      "duration": "3时21分",
+      "note": "12306 查询日 2026-07-15 · 一等 / 二等座"
+    },
+    {
+      "routeId": "xicheng",
+      "no": "G321",
+      "from": "西安北",
+      "to": "成都东",
+      "depart": "11:25",
+      "arrive": "14:30",
+      "duration": "3时05分",
+      "note": "12306 查询日 2026-07-15 · 商务 / 一等 / 二等座"
+    },
+    {
+      "routeId": "xicheng",
+      "no": "G323",
+      "from": "西安北",
+      "to": "成都东",
+      "depart": "19:17",
+      "arrive": "22:28",
+      "duration": "3时11分",
+      "note": "12306 查询日 2026-07-15 · 商务 / 一等 / 二等座"
+    }
+  ]
+}

@@ -1,23 +1,24 @@
 {
-  "id": "huming",
-  "name": "沪昆高速铁路",
-  "shortName": "沪昆高铁",
-  "type": "scenic",
-  "color": "#6c7d42",
-  "darkColor": "#a2b96f",
-  "distance": 2252,
-  "duration": "9时35分",
-  "description": "从海派都会向云贵高原延伸，沿途尽览江南、湘西与喀斯特地貌。",
-  "stations": [
-    "shanghai",
-    "hangzhou",
-    "nanchang",
-    "changsha",
-    "guiyang",
-    "kunming"
+  "id": "kunming",
+  "name": "昆明南站",
+  "lat": 24.88,
+  "lng": 102.832,
+  "tag": "春城门户",
+  "description": "四季如春的终点，也是通往滇南的起点。",
+  "aliases": [
+    "??",
+    "???",
+    "kunming",
+    "kunmingnan",
+    "kmn",
+    "KOM"
   ],
-  "trains": [
+  "routeIds": [
+    "huming"
+  ],
+  "stoppingTrains": [
     {
+      "routeId": "huming",
       "no": "G1371",
       "from": "上海虹桥",
       "to": "昆明南",
@@ -27,6 +28,7 @@
       "note": "12306 查询日 2026-07-15 · 商务 / 一等 / 二等座"
     },
     {
+      "routeId": "huming",
       "no": "G201",
       "from": "上海虹桥",
       "to": "昆明南",
@@ -36,6 +38,7 @@
       "note": "12306 查询日 2026-07-15 · 商务 / 一等 / 二等座"
     },
     {
+      "routeId": "huming",
       "no": "G1373",
       "from": "上海虹桥",
       "to": "昆明南",
@@ -44,13 +47,5 @@
       "duration": "12时14分",
       "note": "12306 查询日 2026-07-15 · 商务 / 一等 / 二等座"
     }
-  ],
-  "aliases": [
-    "??",
-    "????",
-    "????",
-    "shanghai kunming",
-    "huming",
-    "kunming shanghai"
   ]
 }

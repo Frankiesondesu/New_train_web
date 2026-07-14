@@ -1,0 +1,50 @@
+{
+  "id": "suzhou",
+  "name": "苏州北站",
+  "lat": 31.423,
+  "lng": 120.643,
+  "tag": "园林之城",
+  "description": "下车便能开启一场园林与水巷之旅。",
+  "aliases": [
+    "??",
+    "???",
+    "suzhou",
+    "suzhoubei",
+    "szb"
+  ],
+  "routeIds": [
+    "jinghu"
+  ],
+  "stoppingTrains": [
+    {
+      "routeId": "jinghu",
+      "no": "G1",
+      "from": "北京南",
+      "to": "上海虹桥",
+      "depart": "06:30",
+      "arrive": "11:24",
+      "duration": "4时54分",
+      "note": "12306 查询日 2026-07-15 · 商务 / 一等 / 二等座"
+    },
+    {
+      "routeId": "jinghu",
+      "no": "G11",
+      "from": "北京南",
+      "to": "上海虹桥",
+      "depart": "10:03",
+      "arrive": "14:39",
+      "duration": "4时36分",
+      "note": "12306 查询日 2026-07-15 · 商务 / 一等 / 二等座"
+    },
+    {
+      "routeId": "jinghu",
+      "no": "G25",
+      "from": "北京南",
+      "to": "上海虹桥",
+      "depart": "17:00",
+      "arrive": "21:18",
+      "duration": "4时18分",
+      "note": "12306 查询日 2026-07-15 · 商务 / 一等 / 二等座"
+    }
+  ]
+}

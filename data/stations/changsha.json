@@ -1,0 +1,81 @@
+{
+  "id": "changsha",
+  "name": "长沙南站",
+  "lat": 28.147,
+  "lng": 113.064,
+  "tag": "湖湘门户",
+  "description": "一站抵达山水洲城与热辣烟火。",
+  "aliases": [
+    "??",
+    "???",
+    "changsha",
+    "changshanan",
+    "csn"
+  ],
+  "routeIds": [
+    "jingguang",
+    "huming"
+  ],
+  "stoppingTrains": [
+    {
+      "routeId": "jingguang",
+      "no": "G301",
+      "from": "北京西",
+      "to": "广州南",
+      "depart": "08:00",
+      "arrive": "15:36",
+      "duration": "7时36分",
+      "note": "12306 查询日 2026-07-15 · 商务 / 一等 / 二等座"
+    },
+    {
+      "routeId": "jingguang",
+      "no": "G381",
+      "from": "北京西",
+      "to": "广州南",
+      "depart": "10:00",
+      "arrive": "17:17",
+      "duration": "7时17分",
+      "note": "12306 查询日 2026-07-15 · 商务 / 一等 / 二等座"
+    },
+    {
+      "routeId": "jingguang",
+      "no": "G305",
+      "from": "北京西",
+      "to": "广州南",
+      "depart": "14:00",
+      "arrive": "21:43",
+      "duration": "7时43分",
+      "note": "12306 查询日 2026-07-15 · 商务 / 一等 / 二等座"
+    },
+    {
+      "routeId": "huming",
+      "no": "G1371",
+      "from": "上海虹桥",
+      "to": "昆明南",
+      "depart": "07:21",
+      "arrive": "19:03",
+      "duration": "11时42分",
+      "note": "12306 查询日 2026-07-15 · 商务 / 一等 / 二等座"
+    },
+    {
+      "routeId": "huming",
+      "no": "G201",
+      "from": "上海虹桥",
+      "to": "昆明南",
+      "depart": "10:00",
+      "arrive": "19:35",
+      "duration": "9时35分",
+      "note": "12306 查询日 2026-07-15 · 商务 / 一等 / 二等座"
+    },
+    {
+      "routeId": "huming",
+      "no": "G1373",
+      "from": "上海虹桥",
+      "to": "昆明南",
+      "depart": "11:10",
+      "arrive": "23:24",
+      "duration": "12时14分",
+      "note": "12306 查询日 2026-07-15 · 商务 / 一等 / 二等座"
+    }
+  ]
+}

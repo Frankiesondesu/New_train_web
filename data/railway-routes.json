@@ -1,0 +1,87 @@
+{
+  "source": {
+    "provider": "China Railway 12306",
+    "queriedAt": "2026-07-14",
+    "scheduleDate": "2026-07-15",
+    "note": "车次、出发到达站、时刻和历时来自 12306 余票/车次查询；站点坐标和旅行内容为项目静态整理。"
+  },
+  "routes": [
+    {
+      "id": "jinghu",
+      "name": "京沪高速铁路",
+      "shortName": "京沪高铁",
+      "type": "highspeed",
+      "color": "#c24d33",
+      "darkColor": "#ef765c",
+      "distance": 1318,
+      "duration": "4时18分",
+      "description": "纵贯华北与江南，在城市天际线与水乡平原之间飞驰。",
+      "stationIds": [
+        "beijing",
+        "jinan",
+        "nanjing",
+        "suzhou",
+        "shanghai"
+      ],
+      "detailFile": "route-details/jinghu.json"
+    },
+    {
+      "id": "jingguang",
+      "name": "京广高速铁路",
+      "shortName": "京广高铁",
+      "type": "highspeed",
+      "color": "#386b8c",
+      "darkColor": "#73acd0",
+      "distance": 2298,
+      "duration": "7时17分",
+      "description": "从北国古都一路南下，穿越中原、湖湘，抵达岭南。",
+      "stationIds": [
+        "beijing",
+        "shijiazhuang",
+        "zhengzhou",
+        "wuhan",
+        "changsha",
+        "guangzhou"
+      ],
+      "detailFile": "route-details/jingguang.json"
+    },
+    {
+      "id": "xicheng",
+      "name": "西成客运专线",
+      "shortName": "西成高铁",
+      "type": "scenic",
+      "color": "#c98a2e",
+      "darkColor": "#e2ad5a",
+      "distance": 658,
+      "duration": "3时05分",
+      "description": "穿越秦岭腹地，把关中平原、蜀道山川与成都烟火串成一线。",
+      "stationIds": [
+        "xian",
+        "hanzhong",
+        "guangyuan",
+        "chengdu"
+      ],
+      "detailFile": "route-details/xicheng.json"
+    },
+    {
+      "id": "huming",
+      "name": "沪昆高速铁路",
+      "shortName": "沪昆高铁",
+      "type": "scenic",
+      "color": "#6c7d42",
+      "darkColor": "#a2b96f",
+      "distance": 2252,
+      "duration": "9时35分",
+      "description": "从海派都会向云贵高原延伸，沿途尽览江南、湘西与喀斯特地貌。",
+      "stationIds": [
+        "shanghai",
+        "hangzhou",
+        "nanchang",
+        "changsha",
+        "guiyang",
+        "kunming"
+      ],
+      "detailFile": "route-details/huming.json"
+    }
+  ]
+}

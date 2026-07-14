@@ -1,21 +1,24 @@
 {
-  "id": "xicheng",
-  "name": "西成客运专线",
-  "shortName": "西成高铁",
-  "type": "scenic",
-  "color": "#c98a2e",
-  "darkColor": "#e2ad5a",
-  "distance": 658,
-  "duration": "3时05分",
-  "description": "穿越秦岭腹地，把关中平原、蜀道山川与成都烟火串成一线。",
-  "stations": [
-    "xian",
-    "hanzhong",
-    "guangyuan",
-    "chengdu"
+  "id": "chengdu",
+  "name": "成都东站",
+  "lat": 30.629,
+  "lng": 104.14,
+  "tag": "天府枢纽",
+  "description": "抵达成都，从茶馆、美食到雪山脚下。",
+  "aliases": [
+    "??",
+    "???",
+    "chengdu",
+    "chengdudong",
+    "cdd",
+    "ICW"
   ],
-  "trains": [
+  "routeIds": [
+    "xicheng"
+  ],
+  "stoppingTrains": [
     {
+      "routeId": "xicheng",
       "no": "D1915",
       "from": "西安北",
       "to": "成都东",
@@ -25,6 +28,7 @@
       "note": "12306 查询日 2026-07-15 · 一等 / 二等座"
     },
     {
+      "routeId": "xicheng",
       "no": "G321",
       "from": "西安北",
       "to": "成都东",
@@ -34,6 +38,7 @@
       "note": "12306 查询日 2026-07-15 · 商务 / 一等 / 二等座"
     },
     {
+      "routeId": "xicheng",
       "no": "G323",
       "from": "西安北",
       "to": "成都东",
@@ -42,13 +47,5 @@
       "duration": "3时11分",
       "note": "12306 查询日 2026-07-15 · 商务 / 一等 / 二等座"
     }
-  ],
-  "aliases": [
-    "??",
-    "????",
-    "????",
-    "xian chengdu",
-    "xicheng",
-    "chengdu xian"
   ]
 }

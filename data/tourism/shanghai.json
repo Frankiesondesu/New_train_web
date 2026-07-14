@@ -1,0 +1,37 @@
+{
+  "stationId": "shanghai",
+  "attractions": [
+    {
+      "name": "外滩",
+      "description": "万国建筑与浦江夜景",
+      "rating": "4.9",
+      "distance": "19 km",
+      "image": "https://images.unsplash.com/photo-1537531383496-f4749b8032cf?auto=format&fit=crop&w=500&q=80"
+    },
+    {
+      "name": "武康路",
+      "description": "梧桐树下的城市漫步",
+      "rating": "4.7",
+      "distance": "12 km",
+      "image": "https://images.unsplash.com/photo-1548919973-5cef591cdbc9?auto=format&fit=crop&w=500&q=80"
+    }
+  ],
+  "scenery": [
+    {
+      "name": "近郊风景",
+      "description": "适合半日或一日的自然之旅",
+      "rating": "推荐",
+      "distance": "近郊",
+      "image": "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=500&q=80"
+    }
+  ],
+  "stays": [
+    {
+      "name": "衡山路精品酒店",
+      "description": "安静街区与梧桐景观",
+      "rating": "¥720起",
+      "distance": "11 km",
+      "image": "https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=500&q=80"
+    }
+  ]
+}

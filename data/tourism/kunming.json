@@ -1,0 +1,37 @@
+{
+  "stationId": "kunming",
+  "attractions": [
+    {
+      "name": "城市漫游",
+      "description": "从车站出发探索当地人文地标",
+      "rating": "推荐",
+      "distance": "市区",
+      "image": "https://images.unsplash.com/photo-1533105079780-92b9be482077?auto=format&fit=crop&w=500&q=80"
+    }
+  ],
+  "scenery": [
+    {
+      "name": "滇池海埂",
+      "description": "冬日观鸥与西山剪影",
+      "rating": "推荐",
+      "distance": "31 km",
+      "image": "https://images.unsplash.com/photo-1470770841072-f978cf4d019e?auto=format&fit=crop&w=500&q=80"
+    },
+    {
+      "name": "石林风景区",
+      "description": "世界自然遗产喀斯特奇观",
+      "rating": "4.7",
+      "distance": "64 km",
+      "image": "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=500&q=80"
+    }
+  ],
+  "stays": [
+    {
+      "name": "翠湖边精品民宿",
+      "description": "步行探索昆明老街",
+      "rating": "¥420起",
+      "distance": "29 km",
+      "image": "https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?auto=format&fit=crop&w=500&q=80"
+    }
+  ]
+}

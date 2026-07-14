@@ -1,7 +1,7 @@
 ﻿let routes = [];
 let stations = {};
 let dataSource = {};
-const assetVersion = "20260714-rail-split";
+const assetVersion = "20260714-data-model";
 
 loadRailwayData();
 
@@ -17,12 +17,22 @@ async function fetchJson(path) {
 
 async function loadRailwayData() {
   try {
-    const manifest = await fetchJson("data/railway-data.json");
-    const [stationData, routeData] = await Promise.all([
-      fetchJson(`data/${manifest.stations}`),
-      Promise.all((manifest.routes || []).map(route => fetchJson(`data/${route.file}`)))
-    ]);
-    initApp({ source: manifest.source, stations: stationData, routes: routeData });
+    const catalog = await fetchJson("data/railway-routes.json");
+    const routeDetails = await Promise.all((catalog.routes || []).map(route => fetchJson(`data/${route.detailFile}`)));
+    const detailsByRoute = Object.fromEntries(routeDetails.map(detail => [detail.id, detail]));
+    const routeData = (catalog.routes || []).map(route => {
+      const detail = detailsByRoute[route.id] || {};
+      return { ...route, stations: route.stationIds || [], aliases: detail.aliases || [], trains: detail.trains || [] };
+    });
+    const stationIds = [...new Set(routeData.flatMap(route => route.stations))];
+    const stationEntries = await Promise.all(stationIds.map(async id => {
+      const [station, tourism] = await Promise.all([
+        fetchJson(`data/stations/${id}.json`),
+        fetchJson(`data/tourism/${id}.json`)
+      ]);
+      return [id, { ...station, attractions: tourism.attractions || [], scenery: tourism.scenery || [], stays: tourism.stays || [] }];
+    }));
+    initApp({ source: catalog.source, stations: Object.fromEntries(stationEntries), routes: routeData });
   } catch (error) {
     const panelContent = document.getElementById("panel-content");
     if (panelContent) {
@@ -655,6 +665,7 @@ updateSavedButton();
 renderWelcome();
 
 }
+
 
 
 

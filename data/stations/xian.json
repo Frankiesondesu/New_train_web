@@ -1,0 +1,51 @@
+{
+  "id": "xian",
+  "name": "西安北站",
+  "lat": 34.378,
+  "lng": 108.94,
+  "tag": "关中枢纽",
+  "description": "从盛唐长安出发，向秦岭与巴蜀前行。",
+  "aliases": [
+    "??",
+    "???",
+    "xian",
+    "xianbei",
+    "xab",
+    "EAY"
+  ],
+  "routeIds": [
+    "xicheng"
+  ],
+  "stoppingTrains": [
+    {
+      "routeId": "xicheng",
+      "no": "D1915",
+      "from": "西安北",
+      "to": "成都东",
+      "depart": "08:50",
+      "arrive": "12:11",
+      "duration": "3时21分",
+      "note": "12306 查询日 2026-07-15 · 一等 / 二等座"
+    },
+    {
+      "routeId": "xicheng",
+      "no": "G321",
+      "from": "西安北",
+      "to": "成都东",
+      "depart": "11:25",
+      "arrive": "14:30",
+      "duration": "3时05分",
+      "note": "12306 查询日 2026-07-15 · 商务 / 一等 / 二等座"
+    },
+    {
+      "routeId": "xicheng",
+      "no": "G323",
+      "from": "西安北",
+      "to": "成都东",
+      "depart": "19:17",
+      "arrive": "22:28",
+      "duration": "3时11分",
+      "note": "12306 查询日 2026-07-15 · 商务 / 一等 / 二等座"
+    }
+  ]
+}

@@ -1,23 +1,21 @@
 {
-  "id": "jingguang",
-  "name": "京广高速铁路",
-  "shortName": "京广高铁",
-  "type": "highspeed",
-  "color": "#386b8c",
-  "darkColor": "#73acd0",
-  "distance": 2298,
-  "duration": "7时17分",
-  "description": "从北国古都一路南下，穿越中原、湖湘，抵达岭南。",
-  "stations": [
-    "beijing",
-    "shijiazhuang",
-    "zhengzhou",
+  "id": "wuhan",
+  "name": "武汉站",
+  "lat": 30.607,
+  "lng": 114.424,
+  "tag": "江城门户",
+  "description": "从高铁站去看长江、东湖和百年街区。",
+  "aliases": [
+    "??",
     "wuhan",
-    "changsha",
-    "guangzhou"
+    "wh"
   ],
-  "trains": [
+  "routeIds": [
+    "jingguang"
+  ],
+  "stoppingTrains": [
     {
+      "routeId": "jingguang",
       "no": "G301",
       "from": "北京西",
       "to": "广州南",
@@ -27,6 +25,7 @@
       "note": "12306 查询日 2026-07-15 · 商务 / 一等 / 二等座"
     },
     {
+      "routeId": "jingguang",
       "no": "G381",
       "from": "北京西",
       "to": "广州南",
@@ -36,6 +35,7 @@
       "note": "12306 查询日 2026-07-15 · 商务 / 一等 / 二等座"
     },
     {
+      "routeId": "jingguang",
       "no": "G305",
       "from": "北京西",
       "to": "广州南",
@@ -44,13 +44,5 @@
       "duration": "7时43分",
       "note": "12306 查询日 2026-07-15 · 商务 / 一等 / 二等座"
     }
-  ],
-  "aliases": [
-    "??",
-    "????",
-    "????",
-    "beijing guangzhou",
-    "jingguang",
-    "guangzhou beijing"
   ]
 }

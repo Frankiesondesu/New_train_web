@@ -1,0 +1,48 @@
+{
+  "id": "hanzhong",
+  "name": "汉中站",
+  "lat": 33.073,
+  "lng": 107.034,
+  "tag": "秦巴山城",
+  "description": "在秦岭与巴山之间寻找油菜花海和古蜀道。",
+  "aliases": [
+    "??",
+    "hanzhong",
+    "hz"
+  ],
+  "routeIds": [
+    "xicheng"
+  ],
+  "stoppingTrains": [
+    {
+      "routeId": "xicheng",
+      "no": "D1915",
+      "from": "西安北",
+      "to": "成都东",
+      "depart": "08:50",
+      "arrive": "12:11",
+      "duration": "3时21分",
+      "note": "12306 查询日 2026-07-15 · 一等 / 二等座"
+    },
+    {
+      "routeId": "xicheng",
+      "no": "G321",
+      "from": "西安北",
+      "to": "成都东",
+      "depart": "11:25",
+      "arrive": "14:30",
+      "duration": "3时05分",
+      "note": "12306 查询日 2026-07-15 · 商务 / 一等 / 二等座"
+    },
+    {
+      "routeId": "xicheng",
+      "no": "G323",
+      "from": "西安北",
+      "to": "成都东",
+      "depart": "19:17",
+      "arrive": "22:28",
+      "duration": "3时11分",
+      "note": "12306 查询日 2026-07-15 · 商务 / 一等 / 二等座"
+    }
+  ]
+}

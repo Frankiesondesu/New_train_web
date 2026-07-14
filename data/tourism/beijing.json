@@ -1,0 +1,37 @@
+{
+  "stationId": "beijing",
+  "attractions": [
+    {
+      "name": "天坛公园",
+      "description": "皇家坛庙与古柏林",
+      "rating": "4.8",
+      "distance": "6.2 km",
+      "image": "https://images.unsplash.com/photo-1508804185872-d7badad00f7d?auto=format&fit=crop&w=500&q=80"
+    },
+    {
+      "name": "前门大街",
+      "description": "老字号与京味街巷",
+      "rating": "4.6",
+      "distance": "5.1 km",
+      "image": "https://images.unsplash.com/photo-1547981609-4b6bfe67ca0b?auto=format&fit=crop&w=500&q=80"
+    }
+  ],
+  "scenery": [
+    {
+      "name": "景山日落",
+      "description": "俯瞰北京中轴线",
+      "rating": "推荐",
+      "distance": "9.4 km",
+      "image": "https://images.unsplash.com/photo-1584646098378-0874589d76b1?auto=format&fit=crop&w=500&q=80"
+    }
+  ],
+  "stays": [
+    {
+      "name": "前门四合院",
+      "description": "胡同里的院落住宿",
+      "rating": "¥680起",
+      "distance": "5.4 km",
+      "image": "https://images.unsplash.com/photo-1564501049412-61c2a3083791?auto=format&fit=crop&w=500&q=80"
+    }
+  ]
+}

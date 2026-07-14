@@ -1,0 +1,50 @@
+{
+  "id": "nanchang",
+  "name": "南昌西站",
+  "lat": 28.623,
+  "lng": 115.793,
+  "tag": "赣鄱枢纽",
+  "description": "沿赣江进入英雄城，也通往庐山与婺源。",
+  "aliases": [
+    "??",
+    "???",
+    "nanchang",
+    "nanchangxi",
+    "ncx"
+  ],
+  "routeIds": [
+    "huming"
+  ],
+  "stoppingTrains": [
+    {
+      "routeId": "huming",
+      "no": "G1371",
+      "from": "上海虹桥",
+      "to": "昆明南",
+      "depart": "07:21",
+      "arrive": "19:03",
+      "duration": "11时42分",
+      "note": "12306 查询日 2026-07-15 · 商务 / 一等 / 二等座"
+    },
+    {
+      "routeId": "huming",
+      "no": "G201",
+      "from": "上海虹桥",
+      "to": "昆明南",
+      "depart": "10:00",
+      "arrive": "19:35",
+      "duration": "9时35分",
+      "note": "12306 查询日 2026-07-15 · 商务 / 一等 / 二等座"
+    },
+    {
+      "routeId": "huming",
+      "no": "G1373",
+      "from": "上海虹桥",
+      "to": "昆明南",
+      "depart": "11:10",
+      "arrive": "23:24",
+      "duration": "12时14分",
+      "note": "12306 查询日 2026-07-15 · 商务 / 一等 / 二等座"
+    }
+  ]
+}

@@ -1,0 +1,82 @@
+{
+  "id": "beijing",
+  "name": "北京南站",
+  "lat": 39.865,
+  "lng": 116.379,
+  "tag": "华北枢纽",
+  "description": "连接古都胡同与国家铁路网的起点。",
+  "aliases": [
+    "??",
+    "???",
+    "beijing",
+    "beijingnan",
+    "bjn",
+    "VNP"
+  ],
+  "routeIds": [
+    "jinghu",
+    "jingguang"
+  ],
+  "stoppingTrains": [
+    {
+      "routeId": "jinghu",
+      "no": "G1",
+      "from": "北京南",
+      "to": "上海虹桥",
+      "depart": "06:30",
+      "arrive": "11:24",
+      "duration": "4时54分",
+      "note": "12306 查询日 2026-07-15 · 商务 / 一等 / 二等座"
+    },
+    {
+      "routeId": "jinghu",
+      "no": "G11",
+      "from": "北京南",
+      "to": "上海虹桥",
+      "depart": "10:03",
+      "arrive": "14:39",
+      "duration": "4时36分",
+      "note": "12306 查询日 2026-07-15 · 商务 / 一等 / 二等座"
+    },
+    {
+      "routeId": "jinghu",
+      "no": "G25",
+      "from": "北京南",
+      "to": "上海虹桥",
+      "depart": "17:00",
+      "arrive": "21:18",
+      "duration": "4时18分",
+      "note": "12306 查询日 2026-07-15 · 商务 / 一等 / 二等座"
+    },
+    {
+      "routeId": "jingguang",
+      "no": "G301",
+      "from": "北京西",
+      "to": "广州南",
+      "depart": "08:00",
+      "arrive": "15:36",
+      "duration": "7时36分",
+      "note": "12306 查询日 2026-07-15 · 商务 / 一等 / 二等座"
+    },
+    {
+      "routeId": "jingguang",
+      "no": "G381",
+      "from": "北京西",
+      "to": "广州南",
+      "depart": "10:00",
+      "arrive": "17:17",
+      "duration": "7时17分",
+      "note": "12306 查询日 2026-07-15 · 商务 / 一等 / 二等座"
+    },
+    {
+      "routeId": "jingguang",
+      "no": "G305",
+      "from": "北京西",
+      "to": "广州南",
+      "depart": "14:00",
+      "arrive": "21:43",
+      "duration": "7时43分",
+      "note": "12306 查询日 2026-07-15 · 商务 / 一等 / 二等座"
+    }
+  ]
+}

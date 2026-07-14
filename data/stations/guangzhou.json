@@ -1,0 +1,51 @@
+{
+  "id": "guangzhou",
+  "name": "广州南站",
+  "lat": 22.99,
+  "lng": 113.269,
+  "tag": "岭南枢纽",
+  "description": "连接粤港澳大湾区的繁忙门户。",
+  "aliases": [
+    "??",
+    "???",
+    "guangzhou",
+    "guangzhounan",
+    "gzn",
+    "IZQ"
+  ],
+  "routeIds": [
+    "jingguang"
+  ],
+  "stoppingTrains": [
+    {
+      "routeId": "jingguang",
+      "no": "G301",
+      "from": "北京西",
+      "to": "广州南",
+      "depart": "08:00",
+      "arrive": "15:36",
+      "duration": "7时36分",
+      "note": "12306 查询日 2026-07-15 · 商务 / 一等 / 二等座"
+    },
+    {
+      "routeId": "jingguang",
+      "no": "G381",
+      "from": "北京西",
+      "to": "广州南",
+      "depart": "10:00",
+      "arrive": "17:17",
+      "duration": "7时17分",
+      "note": "12306 查询日 2026-07-15 · 商务 / 一等 / 二等座"
+    },
+    {
+      "routeId": "jingguang",
+      "no": "G305",
+      "from": "北京西",
+      "to": "广州南",
+      "depart": "14:00",
+      "arrive": "21:43",
+      "duration": "7时43分",
+      "note": "12306 查询日 2026-07-15 · 商务 / 一等 / 二等座"
+    }
+  ]
+}

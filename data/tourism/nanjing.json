@@ -1,0 +1,37 @@
+{
+  "stationId": "nanjing",
+  "attractions": [
+    {
+      "name": "中山陵",
+      "description": "梧桐大道与近代建筑",
+      "rating": "4.8",
+      "distance": "14 km",
+      "image": "https://images.unsplash.com/photo-1561361513-2d000a50f0dc?auto=format&fit=crop&w=500&q=80"
+    },
+    {
+      "name": "夫子庙",
+      "description": "秦淮河畔的旧城夜色",
+      "rating": "4.7",
+      "distance": "8.5 km",
+      "image": "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?auto=format&fit=crop&w=500&q=80"
+    }
+  ],
+  "scenery": [
+    {
+      "name": "近郊风景",
+      "description": "适合半日或一日的自然之旅",
+      "rating": "推荐",
+      "distance": "近郊",
+      "image": "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=500&q=80"
+    }
+  ],
+  "stays": [
+    {
+      "name": "车站精选住宿",
+      "description": "交通便利，适合铁路旅行者",
+      "rating": "¥380起",
+      "distance": "3 km内",
+      "image": "https://images.unsplash.com/photo-1566665797739-1674de7a421a?auto=format&fit=crop&w=500&q=80"
+    }
+  ]
+}

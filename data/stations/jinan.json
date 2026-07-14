@@ -1,0 +1,50 @@
+{
+  "id": "jinan",
+  "name": "济南西站",
+  "lat": 36.668,
+  "lng": 116.89,
+  "tag": "泉城门户",
+  "description": "从高铁站出发，寻访泉水与老城。",
+  "aliases": [
+    "??",
+    "???",
+    "jinan",
+    "jinanxi",
+    "jnx"
+  ],
+  "routeIds": [
+    "jinghu"
+  ],
+  "stoppingTrains": [
+    {
+      "routeId": "jinghu",
+      "no": "G1",
+      "from": "北京南",
+      "to": "上海虹桥",
+      "depart": "06:30",
+      "arrive": "11:24",
+      "duration": "4时54分",
+      "note": "12306 查询日 2026-07-15 · 商务 / 一等 / 二等座"
+    },
+    {
+      "routeId": "jinghu",
+      "no": "G11",
+      "from": "北京南",
+      "to": "上海虹桥",
+      "depart": "10:03",
+      "arrive": "14:39",
+      "duration": "4时36分",
+      "note": "12306 查询日 2026-07-15 · 商务 / 一等 / 二等座"
+    },
+    {
+      "routeId": "jinghu",
+      "no": "G25",
+      "from": "北京南",
+      "to": "上海虹桥",
+      "depart": "17:00",
+      "arrive": "21:18",
+      "duration": "4时18分",
+      "note": "12306 查询日 2026-07-15 · 商务 / 一等 / 二等座"
+    }
+  ]
+}

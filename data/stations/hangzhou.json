@@ -1,0 +1,50 @@
+{
+  "id": "hangzhou",
+  "name": "杭州东站",
+  "lat": 30.293,
+  "lng": 120.212,
+  "tag": "钱塘门户",
+  "description": "下车后，在西湖与茶山之间慢下来。",
+  "aliases": [
+    "??",
+    "???",
+    "hangzhou",
+    "hangzhoudong",
+    "hzd"
+  ],
+  "routeIds": [
+    "huming"
+  ],
+  "stoppingTrains": [
+    {
+      "routeId": "huming",
+      "no": "G1371",
+      "from": "上海虹桥",
+      "to": "昆明南",
+      "depart": "07:21",
+      "arrive": "19:03",
+      "duration": "11时42分",
+      "note": "12306 查询日 2026-07-15 · 商务 / 一等 / 二等座"
+    },
+    {
+      "routeId": "huming",
+      "no": "G201",
+      "from": "上海虹桥",
+      "to": "昆明南",
+      "depart": "10:00",
+      "arrive": "19:35",
+      "duration": "9时35分",
+      "note": "12306 查询日 2026-07-15 · 商务 / 一等 / 二等座"
+    },
+    {
+      "routeId": "huming",
+      "no": "G1373",
+      "from": "上海虹桥",
+      "to": "昆明南",
+      "depart": "11:10",
+      "arrive": "23:24",
+      "duration": "12时14分",
+      "note": "12306 查询日 2026-07-15 · 商务 / 一等 / 二等座"
+    }
+  ]
+}

@@ -1,19 +1,12 @@
 {
   "id": "jinghu",
-  "name": "京沪高速铁路",
-  "shortName": "京沪高铁",
-  "type": "highspeed",
-  "color": "#c24d33",
-  "darkColor": "#ef765c",
-  "distance": 1318,
-  "duration": "4时18分",
-  "description": "纵贯华北与江南，在城市天际线与水乡平原之间飞驰。",
-  "stations": [
-    "beijing",
-    "jinan",
-    "nanjing",
-    "suzhou",
-    "shanghai"
+  "aliases": [
+    "??",
+    "????",
+    "????",
+    "beijing shanghai",
+    "jinghu",
+    "shanghai beijing"
   ],
   "trains": [
     {
@@ -44,12 +37,10 @@
       "note": "12306 查询日 2026-07-15 · 商务 / 一等 / 二等座"
     }
   ],
-  "aliases": [
-    "??",
-    "????",
-    "????",
-    "beijing shanghai",
-    "jinghu",
-    "shanghai beijing"
-  ]
+  "dataSource": {
+    "provider": "China Railway 12306",
+    "queriedAt": "2026-07-14",
+    "scheduleDate": "2026-07-15",
+    "note": "车次、出发到达站、时刻和历时来自 12306 余票/车次查询；站点坐标和旅行内容为项目静态整理。"
+  }
 }

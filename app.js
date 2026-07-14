@@ -45,10 +45,16 @@ const tileLayer = L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.pn
   crossOrigin: true
 }).addTo(map);
 
+const mapStatus = document.getElementById("map-status");
+const mapStatusTitle = document.getElementById("map-status-title");
+const mapStatusMessage = document.getElementById("map-status-message");
+const mapRetryButton = document.getElementById("map-retry-button");
 let geoLayer = null;
 let tileLoads = 0;
 let tileErrors = 0;
 let tileHealthTimer = null;
+let tilesDegraded = false;
+let geometryUnavailable = false;
 
 tileLayer.on("loading", () => {
   tileLoads = 0;
@@ -69,10 +75,39 @@ function scheduleTileHealthCheck() {
   tileHealthTimer = setTimeout(() => {
     const total = tileLoads + tileErrors;
     const degraded = total >= 6 && tileErrors / total > .35;
-    map.getContainer().classList.toggle("map-tiles-degraded", degraded);
+    tilesDegraded = degraded;
+    map.getContainer().classList.toggle("map-tiles-degraded", tilesDegraded);
     geoLayer?.setStyle(geometryStyle);
+    updateMapStatus();
   }, 450);
 }
+
+function updateMapStatus() {
+  if (tilesDegraded) {
+    mapStatusTitle.textContent = "底图加载不稳定";
+    mapStatusMessage.textContent = "在线地图瓦片加载失败较多，已自动切换到行政区划底图。线路、车站和搜索仍可正常使用。";
+    mapStatus.hidden = false;
+    return;
+  }
+  if (geometryUnavailable) {
+    mapStatusTitle.textContent = "行政区划底图加载失败";
+    mapStatusMessage.textContent = "备用地图轮廓暂时不可用，但线路、车站和车次信息仍可正常查看。";
+    mapStatus.hidden = false;
+    return;
+  }
+  mapStatus.hidden = true;
+}
+
+mapRetryButton.addEventListener("click", () => {
+  tileLoads = 0;
+  tileErrors = 0;
+  tilesDegraded = false;
+  map.getContainer().classList.remove("map-tiles-degraded");
+  tileLayer.redraw();
+  loadGeometry();
+  updateMapStatus();
+  requestAnimationFrame(() => map.invalidateSize({ pan: false }));
+});
 
 function cssToken(name) {
   return getComputedStyle(document.documentElement).getPropertyValue(name).trim();
@@ -88,21 +123,31 @@ function geometryStyle() {
   };
 }
 
-fetch("https://geo.datav.aliyun.com/areas_v3/bound/100000_full.json")
-  .then(response => {
-    if (!response.ok) throw new Error("行政区划数据加载失败");
-    return response.json();
-  })
-  .then(geojson => {
-    geoLayer = L.geoJSON(geojson, {
-      pane: "geoPane",
-      interactive: false,
-      style: geometryStyle
-    }).addTo(map);
-  })
-  .catch(() => {
-    document.getElementById("map").classList.add("map-geometry-unavailable");
-  });
+function loadGeometry() {
+  fetch("https://geo.datav.aliyun.com/areas_v3/bound/100000_full.json")
+    .then(response => {
+      if (!response.ok) throw new Error("行政区划数据加载失败");
+      return response.json();
+    })
+    .then(geojson => {
+      geometryUnavailable = false;
+      map.getContainer().classList.remove("map-geometry-unavailable");
+      if (geoLayer) geoLayer.remove();
+      geoLayer = L.geoJSON(geojson, {
+        pane: "geoPane",
+        interactive: false,
+        style: geometryStyle
+      }).addTo(map);
+      updateMapStatus();
+    })
+    .catch(() => {
+      geometryUnavailable = true;
+      map.getContainer().classList.add("map-geometry-unavailable");
+      updateMapStatus();
+    });
+}
+
+loadGeometry();
 
 const routeLayers = new Map();
 const stationMarkers = new Map();

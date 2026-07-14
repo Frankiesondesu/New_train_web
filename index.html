@@ -61,6 +61,13 @@
 
       <section class="map-shell" aria-label="中国铁路旅行地图">
         <div id="map"></div>
+        <div class="map-status" id="map-status" hidden>
+          <div>
+            <b id="map-status-title">地图加载异常</b>
+            <p id="map-status-message">部分地图资源加载失败，已保留线路和车站信息。</p>
+          </div>
+          <button id="map-retry-button" type="button">重试</button>
+        </div>
 
         <div class="map-toolbar" aria-label="线路筛选">
           <button class="filter-chip active" type="button" data-filter="all"><span class="filter-dot all"></span>全部线路</button>

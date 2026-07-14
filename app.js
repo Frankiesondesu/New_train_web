@@ -1,7 +1,8 @@
 ﻿let routes = [];
 let stations = {};
 let dataSource = {};
-const assetVersion = "20260714-data-model";
+let publicSlowTrains = [];
+const assetVersion = "20260714-slow-trains";
 
 loadRailwayData();
 
@@ -17,7 +18,10 @@ async function fetchJson(path) {
 
 async function loadRailwayData() {
   try {
-    const catalog = await fetchJson("data/railway-routes.json");
+    const [catalog, slowTrainCatalog] = await Promise.all([
+      fetchJson("data/railway-routes.json"),
+      fetchJson("data/slow-trains/public-welfare.json")
+    ]);
     const routeDetails = await Promise.all((catalog.routes || []).map(route => fetchJson(`data/${route.detailFile}`)));
     const detailsByRoute = Object.fromEntries(routeDetails.map(detail => [detail.id, detail]));
     const routeData = (catalog.routes || []).map(route => {
@@ -32,7 +36,7 @@ async function loadRailwayData() {
       ]);
       return [id, { ...station, attractions: tourism.attractions || [], scenery: tourism.scenery || [], stays: tourism.stays || [] }];
     }));
-    initApp({ source: catalog.source, stations: Object.fromEntries(stationEntries), routes: routeData });
+    initApp({ source: catalog.source, stations: Object.fromEntries(stationEntries), routes: routeData, publicSlowTrains: slowTrainCatalog.routes || [] });
   } catch (error) {
     const panelContent = document.getElementById("panel-content");
     if (panelContent) {
@@ -53,6 +57,7 @@ function initApp(data) {
   routes = data.routes || [];
   stations = data.stations || {};
   dataSource = data.source || {};
+  publicSlowTrains = data.publicSlowTrains || [];
 
 function routeDisplayColor(route) {
   return document.documentElement.dataset.theme === "dark" ? route.darkColor : route.color;
@@ -304,6 +309,12 @@ function renderWelcome() {
           </button>`).join("")}
       </div>
       <div class="panel-divider"></div>
+      <div class="section-heading"><h2>公益慢火车</h2><span>${publicSlowTrains.length} 条</span></div>
+      <button class="slow-train-entry" type="button" data-slow-trains>
+        <b>查看 81 条公益慢火车路线</b>
+        <span>覆盖东北、华北、中西部和西北多条普速铁路</span>
+      </button>
+      <div class="panel-divider"></div>
       <div class="section-heading"><h2>生成旅行路线</h2><span>轻量规划</span></div>
       <div class="trip-planner">
         <label>
@@ -464,6 +475,42 @@ function generateTripPlan() {
     </ol>`;
 }
 
+function renderSlowTrains(filter = "") {
+  activeRouteId = null;
+  activeStationId = null;
+  resetLayerStyles();
+  const keyword = normalizeSearchTerm(filter);
+  const list = keyword
+    ? publicSlowTrains.filter(route => matchesSearch([route.trainCodes, route.from, route.to, route.railway, route.region], keyword))
+    : publicSlowTrains;
+  document.getElementById("panel-content").innerHTML = `
+    <div class="panel-inner">
+      <button class="back-button" type="button" data-back>${icon("arrow-left")} 返回线路列表</button>
+      <p class="eyebrow">PUBLIC WELFARE TRAINS</p>
+      <div class="panel-title-row">
+        <span class="panel-icon">${icon("train")}</span>
+        <div><h1>公益慢火车</h1><p>整理 81 条公益性普速慢火车路线，适合了解沿线通勤、赶集和乡村出行网络。</p></div>
+      </div>
+      <div class="stat-row">
+        <div class="stat"><b>${publicSlowTrains.length}</b><span>路线</span></div>
+        <div class="stat"><b>${list.length}</b><span>当前结果</span></div>
+        <div class="stat"><b>普速</b><span>公益慢车</span></div>
+      </div>
+      <div class="panel-divider"></div>
+      <div class="slow-train-list">
+        ${list.map(item => `<article class="slow-train-card">
+          <div><b>${item.trainCodes}</b><span>${item.from} → ${item.to}</span></div>
+          <p>${item.railway}</p>
+          <small>${item.region}</small>
+        </article>`).join("")}
+      </div>
+      <div class="hint-box">${icon("info")}<span>公益慢火车车次可能随铁路调图调整，正式出行前请以铁路官方平台为准。</span></div>
+    </div>`;
+  updateMobileTitle("公益慢火车");
+  openMobilePanel();
+  bindPanelEvents();
+}
+
 function trainCard(train) {
   return `<article class="train-card">
     <div class="train-top"><span class="train-number">${train.no}</span><span class="train-tag">${train.duration}</span></div>
@@ -504,6 +551,7 @@ function bindPanelEvents() {
     button.addEventListener("click", () => toggleFavorite(button.dataset.favoriteKind, button.dataset.favoriteId));
   });
   document.querySelector("[data-generate-trip]")?.addEventListener("click", generateTripPlan);
+  document.querySelector("[data-slow-trains]")?.addEventListener("click", () => renderSlowTrains());
   document.querySelector("[data-back]")?.addEventListener("click", () => {
     activeRouteId = null;
     activeStationId = null;
@@ -599,12 +647,19 @@ function renderSearch(query) {
       }
     });
   });
+  publicSlowTrains.forEach(item => {
+    if (matchesSearch([item.trainCodes, item.from, item.to, item.railway, item.region], keyword)) {
+      results.push({ id: item.trainCodes, name: `${item.trainCodes} · ${item.from}—${item.to}`, type: "公益慢火车", kind: "slow" });
+    }
+  });
   searchResults.innerHTML = results.length
     ? results.slice(0, 7).map(result => `<button class="search-result" type="button" data-search-kind="${result.kind}" data-search-id="${result.id}"><span>${result.name}</span><span class="result-type">${result.type}</span></button>`).join("")
     : '<p class="search-empty">没有找到相关结果</p>';
   searchResults.hidden = false;
   searchResults.querySelectorAll(".search-result").forEach(button => button.addEventListener("click", () => {
-    button.dataset.searchKind === "station" ? selectStation(button.dataset.searchId) : selectRoute(button.dataset.searchId);
+    if (button.dataset.searchKind === "station") selectStation(button.dataset.searchId);
+    else if (button.dataset.searchKind === "slow") renderSlowTrains(button.dataset.searchId);
+    else selectRoute(button.dataset.searchId);
     searchResults.hidden = true;
     searchInput.value = "";
   }));
@@ -665,6 +720,9 @@ updateSavedButton();
 renderWelcome();
 
 }
+
+
+
 
 
 

@@ -1,14 +1,28 @@
 ﻿let routes = [];
 let stations = {};
 let dataSource = {};
+const assetVersion = "20260714-rail-split";
 
 loadRailwayData();
 
+function assetUrl(path) {
+  return `${path}?v=${assetVersion}`;
+}
+
+async function fetchJson(path) {
+  const response = await fetch(assetUrl(path));
+  if (!response.ok) throw new Error(`${path} 加载失败：${response.status}`);
+  return response.json();
+}
+
 async function loadRailwayData() {
   try {
-    const response = await fetch("data/railway-data.json");
-    if (!response.ok) throw new Error(`铁路数据加载失败：${response.status}`);
-    initApp(await response.json());
+    const manifest = await fetchJson("data/railway-data.json");
+    const [stationData, routeData] = await Promise.all([
+      fetchJson(`data/${manifest.stations}`),
+      Promise.all((manifest.routes || []).map(route => fetchJson(`data/${route.file}`)))
+    ]);
+    initApp({ source: manifest.source, stations: stationData, routes: routeData });
   } catch (error) {
     const panelContent = document.getElementById("panel-content");
     if (panelContent) {
@@ -74,7 +88,7 @@ function scheduleTileHealthCheck() {
   clearTimeout(tileHealthTimer);
   tileHealthTimer = setTimeout(() => {
     const total = tileLoads + tileErrors;
-    const degraded = total >= 6 && tileErrors / total > .35;
+    const degraded = total >= 6 && tileLoads === 0 && tileErrors >= 6;
     tilesDegraded = degraded;
     map.getContainer().classList.toggle("map-tiles-degraded", tilesDegraded);
     geoLayer?.setStyle(geometryStyle);
@@ -83,15 +97,9 @@ function scheduleTileHealthCheck() {
 }
 
 function updateMapStatus() {
-  if (tilesDegraded && geometryUnavailable) {
-    mapStatusTitle.textContent = "底图加载不稳定";
-    mapStatusMessage.textContent = "在线地图瓦片加载失败较多，备用行政区划底图也暂时不可用。线路、车站和搜索仍可正常使用。";
-    mapStatus.hidden = false;
-    return;
-  }
   if (tilesDegraded) {
     mapStatusTitle.textContent = "底图加载不稳定";
-    mapStatusMessage.textContent = "在线地图瓦片加载失败较多，已自动切换到行政区划底图。线路、车站和搜索仍可正常使用。";
+    mapStatusMessage.textContent = "在线地图瓦片暂时无法加载，线路、车站和搜索仍可正常使用。可以稍后重试底图。";
     mapStatus.hidden = false;
     return;
   }
@@ -647,5 +655,6 @@ updateSavedButton();
 renderWelcome();
 
 }
+
 
 

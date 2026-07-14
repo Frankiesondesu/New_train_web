@@ -1,0 +1,56 @@
+{
+  "id": "huming",
+  "name": "沪昆高速铁路",
+  "shortName": "沪昆高铁",
+  "type": "scenic",
+  "color": "#6c7d42",
+  "darkColor": "#a2b96f",
+  "distance": 2252,
+  "duration": "9时35分",
+  "description": "从海派都会向云贵高原延伸，沿途尽览江南、湘西与喀斯特地貌。",
+  "stations": [
+    "shanghai",
+    "hangzhou",
+    "nanchang",
+    "changsha",
+    "guiyang",
+    "kunming"
+  ],
+  "trains": [
+    {
+      "no": "G1371",
+      "from": "上海虹桥",
+      "to": "昆明南",
+      "depart": "07:21",
+      "arrive": "19:03",
+      "duration": "11时42分",
+      "note": "12306 查询日 2026-07-15 · 商务 / 一等 / 二等座"
+    },
+    {
+      "no": "G201",
+      "from": "上海虹桥",
+      "to": "昆明南",
+      "depart": "10:00",
+      "arrive": "19:35",
+      "duration": "9时35分",
+      "note": "12306 查询日 2026-07-15 · 商务 / 一等 / 二等座"
+    },
+    {
+      "no": "G1373",
+      "from": "上海虹桥",
+      "to": "昆明南",
+      "depart": "11:10",
+      "arrive": "23:24",
+      "duration": "12时14分",
+      "note": "12306 查询日 2026-07-15 · 商务 / 一等 / 二等座"
+    }
+  ],
+  "aliases": [
+    "??",
+    "????",
+    "????",
+    "shanghai kunming",
+    "huming",
+    "kunming shanghai"
+  ]
+}

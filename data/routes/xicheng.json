@@ -1,0 +1,54 @@
+{
+  "id": "xicheng",
+  "name": "西成客运专线",
+  "shortName": "西成高铁",
+  "type": "scenic",
+  "color": "#c98a2e",
+  "darkColor": "#e2ad5a",
+  "distance": 658,
+  "duration": "3时05分",
+  "description": "穿越秦岭腹地，把关中平原、蜀道山川与成都烟火串成一线。",
+  "stations": [
+    "xian",
+    "hanzhong",
+    "guangyuan",
+    "chengdu"
+  ],
+  "trains": [
+    {
+      "no": "D1915",
+      "from": "西安北",
+      "to": "成都东",
+      "depart": "08:50",
+      "arrive": "12:11",
+      "duration": "3时21分",
+      "note": "12306 查询日 2026-07-15 · 一等 / 二等座"
+    },
+    {
+      "no": "G321",
+      "from": "西安北",
+      "to": "成都东",
+      "depart": "11:25",
+      "arrive": "14:30",
+      "duration": "3时05分",
+      "note": "12306 查询日 2026-07-15 · 商务 / 一等 / 二等座"
+    },
+    {
+      "no": "G323",
+      "from": "西安北",
+      "to": "成都东",
+      "depart": "19:17",
+      "arrive": "22:28",
+      "duration": "3时11分",
+      "note": "12306 查询日 2026-07-15 · 商务 / 一等 / 二等座"
+    }
+  ],
+  "aliases": [
+    "??",
+    "????",
+    "????",
+    "xian chengdu",
+    "xicheng",
+    "chengdu xian"
+  ]
+}

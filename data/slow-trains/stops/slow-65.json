@@ -1,0 +1,319 @@
+{
+  "routeId": "slow-65",
+  "trainCodes": "5633/5634",
+  "from": "??",
+  "to": "????",
+  "railway": "????",
+  "source": {
+    "stops": "5633/5634?????????????????/??????????????????",
+    "coordinates": "???????????????????????????"
+  },
+  "stops": [
+    {
+      "index": 1,
+      "name": "??",
+      "arrive": null,
+      "depart": "07:15",
+      "lat": 28.51972,
+      "lng": 102.64861,
+      "coordinateStatus": "????/?????????"
+    },
+    {
+      "index": 2,
+      "name": "???",
+      "arrive": "07:32",
+      "depart": "07:32",
+      "lat": 28.464603,
+      "lng": 102.656373,
+      "coordinateStatus": "????/?????????"
+    },
+    {
+      "index": 3,
+      "name": "???",
+      "arrive": "07:45",
+      "depart": "07:45",
+      "lat": null,
+      "lng": null,
+      "coordinateStatus": "???"
+    },
+    {
+      "index": 4,
+      "name": "??",
+      "arrive": "08:01",
+      "depart": "08:01",
+      "lat": 28.343901,
+      "lng": 102.626742,
+      "coordinateStatus": "????/?????????"
+    },
+    {
+      "index": 5,
+      "name": "??",
+      "arrive": "08:14",
+      "depart": "08:14",
+      "lat": null,
+      "lng": null,
+      "coordinateStatus": "???"
+    },
+    {
+      "index": 6,
+      "name": "??",
+      "arrive": "08:27",
+      "depart": "08:27",
+      "lat": null,
+      "lng": null,
+      "coordinateStatus": "???"
+    },
+    {
+      "index": 7,
+      "name": "????",
+      "arrive": "08:41",
+      "depart": "08:41",
+      "lat": 28.230029,
+      "lng": 102.564027,
+      "coordinateStatus": "????/?????????"
+    },
+    {
+      "index": 8,
+      "name": "??",
+      "arrive": "08:51",
+      "depart": "08:51",
+      "lat": 28.207801,
+      "lng": 102.551744,
+      "coordinateStatus": "????/?????????"
+    },
+    {
+      "index": 9,
+      "name": "??",
+      "arrive": "09:01",
+      "depart": "09:01",
+      "lat": null,
+      "lng": null,
+      "coordinateStatus": "???"
+    },
+    {
+      "index": 10,
+      "name": "???",
+      "arrive": "09:13",
+      "depart": "09:13",
+      "lat": null,
+      "lng": null,
+      "coordinateStatus": "???"
+    },
+    {
+      "index": 11,
+      "name": "??",
+      "arrive": "09:24",
+      "depart": "09:24",
+      "lat": null,
+      "lng": null,
+      "coordinateStatus": "???"
+    },
+    {
+      "index": 12,
+      "name": "??",
+      "arrive": "09:43",
+      "depart": "09:43",
+      "lat": null,
+      "lng": null,
+      "coordinateStatus": "???"
+    },
+    {
+      "index": 13,
+      "name": "??",
+      "arrive": "10:03",
+      "depart": "10:03",
+      "lat": null,
+      "lng": null,
+      "coordinateStatus": "???"
+    },
+    {
+      "index": 14,
+      "name": "??",
+      "arrive": "10:20",
+      "depart": "10:20",
+      "lat": null,
+      "lng": null,
+      "coordinateStatus": "???"
+    },
+    {
+      "index": 15,
+      "name": "??",
+      "arrive": "10:47",
+      "depart": "10:47",
+      "lat": null,
+      "lng": null,
+      "coordinateStatus": "???"
+    },
+    {
+      "index": 16,
+      "name": "???",
+      "arrive": "11:03",
+      "depart": "11:03",
+      "lat": null,
+      "lng": null,
+      "coordinateStatus": "???"
+    },
+    {
+      "index": 17,
+      "name": "??",
+      "arrive": "11:20",
+      "depart": "11:20",
+      "lat": null,
+      "lng": null,
+      "coordinateStatus": "???"
+    },
+    {
+      "index": 18,
+      "name": "???",
+      "arrive": "11:33",
+      "depart": "11:33",
+      "lat": null,
+      "lng": null,
+      "coordinateStatus": "???"
+    },
+    {
+      "index": 19,
+      "name": "???",
+      "arrive": "11:47",
+      "depart": "11:47",
+      "lat": null,
+      "lng": null,
+      "coordinateStatus": "???"
+    },
+    {
+      "index": 20,
+      "name": "??",
+      "arrive": "12:00",
+      "depart": "12:00",
+      "lat": null,
+      "lng": null,
+      "coordinateStatus": "???"
+    },
+    {
+      "index": 21,
+      "name": "???",
+      "arrive": "12:13",
+      "depart": "12:13",
+      "lat": null,
+      "lng": null,
+      "coordinateStatus": "???"
+    },
+    {
+      "index": 22,
+      "name": "??",
+      "arrive": "12:30",
+      "depart": "12:30",
+      "lat": null,
+      "lng": null,
+      "coordinateStatus": "???"
+    },
+    {
+      "index": 23,
+      "name": "??",
+      "arrive": "12:48",
+      "depart": "12:48",
+      "lat": null,
+      "lng": null,
+      "coordinateStatus": "???"
+    },
+    {
+      "index": 24,
+      "name": "??",
+      "arrive": "13:03",
+      "depart": "13:03",
+      "lat": null,
+      "lng": null,
+      "coordinateStatus": "???"
+    },
+    {
+      "index": 25,
+      "name": "??",
+      "arrive": "13:23",
+      "depart": "13:23",
+      "lat": null,
+      "lng": null,
+      "coordinateStatus": "???"
+    },
+    {
+      "index": 26,
+      "name": "??",
+      "arrive": "13:43",
+      "depart": "13:43",
+      "lat": null,
+      "lng": null,
+      "coordinateStatus": "???"
+    },
+    {
+      "index": 27,
+      "name": "??",
+      "arrive": "13:57",
+      "depart": "13:57",
+      "lat": null,
+      "lng": null,
+      "coordinateStatus": "???"
+    },
+    {
+      "index": 28,
+      "name": "??",
+      "arrive": "14:12",
+      "depart": "14:12",
+      "lat": null,
+      "lng": null,
+      "coordinateStatus": "???"
+    },
+    {
+      "index": 29,
+      "name": "??",
+      "arrive": "14:34",
+      "depart": "14:34",
+      "lat": null,
+      "lng": null,
+      "coordinateStatus": "???"
+    },
+    {
+      "index": 30,
+      "name": "??",
+      "arrive": "14:54",
+      "depart": "14:54",
+      "lat": null,
+      "lng": null,
+      "coordinateStatus": "???"
+    },
+    {
+      "index": 31,
+      "name": "??",
+      "arrive": "15:12",
+      "depart": "15:12",
+      "lat": null,
+      "lng": null,
+      "coordinateStatus": "???"
+    },
+    {
+      "index": 32,
+      "name": "???",
+      "arrive": "15:33",
+      "depart": "15:33",
+      "lat": null,
+      "lng": null,
+      "coordinateStatus": "???"
+    },
+    {
+      "index": 33,
+      "name": "???",
+      "arrive": "15:55",
+      "depart": "15:55",
+      "lat": null,
+      "lng": null,
+      "coordinateStatus": "???"
+    },
+    {
+      "index": 34,
+      "name": "????",
+      "arrive": "16:33",
+      "depart": null,
+      "lat": null,
+      "lng": null,
+      "coordinateStatus": "???"
+    }
+  ]
+}

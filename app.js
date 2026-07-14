@@ -501,7 +501,7 @@ function renderSlowTrains(filter = "") {
         ${list.map(item => `<article class="slow-train-card">
           <div><b>${item.trainCodes}</b><span>${item.from} → ${item.to}</span></div>
           <p>${item.railway}</p>
-          <small>${item.region}</small>
+          <small>${item.region}${item.stopCount ? ` · ${item.stopCount} 站 · 坐标 ${item.coordinateCompleteness}` : ""}</small>
         </article>`).join("")}
       </div>
       <div class="hint-box">${icon("info")}<span>公益慢火车车次可能随铁路调图调整，正式出行前请以铁路官方平台为准。</span></div>

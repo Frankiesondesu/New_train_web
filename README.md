@@ -29,6 +29,7 @@ node server.mjs
 - `data/stations/*.json` 按站点保存车站坐标、别名、经过线路和停靠车次。
 - `data/tourism/*.json` 按站点保存附近景点、风景和住宿信息。
 - `data/slow-trains/public-welfare.json` 保存 81 条公益性普速慢火车路线。
+- `data/slow-trains/stops/*.json` 逐条保存公益慢火车经停站、时刻和已核验坐标。
 - 代表车次、出发到达站、时刻和历时来自 12306 在 `2026-07-15` 的查询结果。
 - 站点坐标、沿途景点、住宿和图片为项目静态整理内容，正式上线前应核对授权、准确性和更新机制。
 

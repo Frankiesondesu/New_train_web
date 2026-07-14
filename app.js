@@ -154,6 +154,8 @@ const stationMarkers = new Map();
 let activeRouteId = null;
 let activeStationId = null;
 let activeFilter = "all";
+const favoriteStorageKey = "tugui-favorites";
+let favorites = loadFavorites();
 
 routes.forEach(route => {
   const coordinates = route.stations.map(id => [stations[id].lat, stations[id].lng]);
@@ -216,6 +218,50 @@ function selectStation(id, shouldPan = true) {
   openMobilePanel();
 }
 
+function loadFavorites() {
+  try {
+    const saved = JSON.parse(localStorage.getItem(favoriteStorageKey) || "{}");
+    return {
+      routes: Array.isArray(saved.routes) ? saved.routes : [],
+      stations: Array.isArray(saved.stations) ? saved.stations : []
+    };
+  } catch {
+    return { routes: [], stations: [] };
+  }
+}
+
+function saveFavorites() {
+  try { localStorage.setItem(favoriteStorageKey, JSON.stringify(favorites)); } catch { /* 收藏不可用时只更新当前界面 */ }
+}
+
+function isFavorite(kind, id) {
+  return favorites[kind]?.includes(id);
+}
+
+function toggleFavorite(kind, id) {
+  const list = favorites[kind] || [];
+  favorites[kind] = list.includes(id) ? list.filter(item => item !== id) : [...list, id];
+  saveFavorites();
+  updateSavedButton();
+  if (kind === "routes" && activeRouteId === id) renderRoute(routes.find(route => route.id === id));
+  if (kind === "stations" && activeStationId === id) renderStation(id, document.querySelector(".tab.active")?.dataset.tab || "attractions");
+}
+
+function updateSavedButton() {
+  const button = document.getElementById("saved-button");
+  if (!button) return;
+  const total = favorites.routes.length + favorites.stations.length;
+  button.setAttribute("aria-label", total ? `我的收藏，${total} 项` : "我的收藏");
+  button.querySelector("span").textContent = total ? `我的收藏 ${total}` : "我的收藏";
+}
+
+function favoriteButton(kind, id) {
+  const active = isFavorite(kind, id);
+  return `<button class="favorite-action ${active ? "active" : ""}" type="button" data-favorite-kind="${kind}" data-favorite-id="${id}" aria-pressed="${active}">
+    ${icon("bookmark")}<span>${active ? "已收藏" : "收藏"}</span>
+  </button>`;
+}
+
 function renderWelcome() {
   document.getElementById("panel-content").innerHTML = `
     <div class="panel-inner">
@@ -253,6 +299,7 @@ function renderRoute(route) {
         <span class="panel-icon">${icon("train")}</span>
         <div><h1>${route.shortName}</h1><p>${route.description}</p></div>
       </div>
+      ${favoriteButton("routes", route.id)}
       <div class="route-heading-line" style="background:${routeDisplayColor(route)}"></div>
       <div class="stat-row">
         <div class="stat"><b>${route.distance.toLocaleString()}</b><span>线路公里</span></div>
@@ -282,6 +329,7 @@ function renderStation(id, tab) {
         <span class="panel-icon">${icon("station")}</span>
         <div><h1>${item.name}</h1><p>${item.description}</p></div>
       </div>
+      ${favoriteButton("stations", id)}
       <div class="station-lines">
         ${passingRoutes.map(route => `<button type="button" class="line-pill" data-route="${route.id}"><i style="background:${routeDisplayColor(route)}"></i>${route.shortName}</button>`).join("")}
       </div>
@@ -297,6 +345,43 @@ function renderStation(id, tab) {
       </div>
       <div class="place-list">${item[tab].map(placeCard).join("")}</div>
     </div>`;
+  bindPanelEvents();
+}
+
+function renderFavorites() {
+  activeRouteId = null;
+  activeStationId = null;
+  resetLayerStyles();
+  const favoriteRoutes = favorites.routes.map(id => routes.find(route => route.id === id)).filter(Boolean);
+  const favoriteStations = favorites.stations.map(id => [id, stations[id]]).filter(([, item]) => item);
+  document.getElementById("panel-content").innerHTML = `
+    <div class="panel-inner">
+      <button class="back-button" type="button" data-back>${icon("arrow-left")} 返回线路列表</button>
+      <p class="eyebrow">SAVED</p>
+      <div class="panel-title-row">
+        <span class="panel-icon">${icon("bookmark")}</span>
+        <div><h1>我的收藏</h1><p>这里保存你关注的线路和车站，仅存储在当前浏览器。</p></div>
+      </div>
+      <div class="panel-divider"></div>
+      ${favoriteRoutes.length || favoriteStations.length ? `
+        <div class="section-heading"><h2>收藏线路</h2><span>${favoriteRoutes.length} 条</span></div>
+        <div class="route-list">
+          ${favoriteRoutes.length ? favoriteRoutes.map(route => `
+            <button class="route-card" type="button" data-route="${route.id}">
+              <span class="route-color" style="background:${routeDisplayColor(route)}"></span>
+              <span><b>${route.shortName}</b><small>${route.distance.toLocaleString()} 公里 · ${route.duration}</small></span>
+              <span class="route-arrow">›</span>
+            </button>`).join("") : '<p class="search-empty">暂未收藏线路</p>'}
+        </div>
+        <div class="panel-divider"></div>
+        <div class="section-heading"><h2>收藏车站</h2><span>${favoriteStations.length} 座</span></div>
+        <div class="favorite-station-list">
+          ${favoriteStations.length ? favoriteStations.map(([id, item]) => `<button class="favorite-station" type="button" data-station="${id}"><b>${item.name}</b><span>${item.tag}</span></button>`).join("") : '<p class="search-empty">暂未收藏车站</p>'}
+        </div>
+      ` : '<div class="hint-box">' + icon("info") + '<span>还没有收藏。打开任意线路或车站详情，点击“收藏”即可保存到这里。</span></div>'}
+    </div>`;
+  updateMobileTitle("我的收藏");
+  openMobilePanel();
   bindPanelEvents();
 }
 
@@ -326,6 +411,7 @@ function icon(name) {
     info: '<circle cx="12" cy="12" r="9"/><path d="M12 11v5m0-8h.01"/>',
     train: '<rect x="5" y="3" width="14" height="15" rx="3"/><path d="M5 12h14M9 21l3-3 3 3M9 8h.01M15 8h.01"/>',
     station: '<path d="M5 21V6l7-3 7 3v15M3 21h18M9 9h6v5H9zM9 21v-4h6v4"/>',
+    bookmark: '<path d="M6 3h12v18l-6-4-6 4V3Z"/>',
     "arrow-left": '<path d="m15 18-6-6 6-6"/>'
   };
   return `<svg viewBox="0 0 24 24" aria-hidden="true">${paths[name] || ""}</svg>`;
@@ -335,6 +421,9 @@ function bindPanelEvents() {
   document.querySelectorAll("[data-route]").forEach(button => button.addEventListener("click", () => selectRoute(button.dataset.route)));
   document.querySelectorAll("[data-station]").forEach(button => button.addEventListener("click", () => selectStation(button.dataset.station)));
   document.querySelectorAll("[data-tab]").forEach(button => button.addEventListener("click", () => renderStation(activeStationId, button.dataset.tab)));
+  document.querySelectorAll("[data-favorite-kind]").forEach(button => {
+    button.addEventListener("click", () => toggleFavorite(button.dataset.favoriteKind, button.dataset.favoriteId));
+  });
   document.querySelector("[data-back]")?.addEventListener("click", () => {
     activeRouteId = null;
     activeStationId = null;
@@ -358,6 +447,8 @@ document.querySelectorAll(".filter-chip").forEach(button => {
     if (visibleBounds.isValid()) map.fitBounds(visibleBounds, { padding: [45, 45], maxZoom: 5 });
   });
 });
+
+document.getElementById("saved-button").addEventListener("click", renderFavorites);
 
 const searchInput = document.getElementById("search-input");
 const searchResults = document.getElementById("search-results");
@@ -489,6 +580,7 @@ window.addEventListener("resize", resizeMap, { passive: true });
 window.addEventListener("load", resizeMap, { once: true });
 
 applyTheme(document.documentElement.dataset.theme || "light", false);
+updateSavedButton();
 
 renderWelcome();
 

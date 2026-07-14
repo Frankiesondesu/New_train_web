@@ -1,0 +1,869 @@
+{
+  "source": {
+    "provider": "China Railway 12306",
+    "queriedAt": "2026-07-14",
+    "scheduleDate": "2026-07-15",
+    "note": "车次、出发到达站、时刻和历时来自 12306 余票/车次查询；站点坐标和旅行内容为项目静态整理。"
+  },
+  "routes": [
+    {
+      "id": "jinghu",
+      "name": "京沪高速铁路",
+      "shortName": "京沪高铁",
+      "type": "highspeed",
+      "color": "#c24d33",
+      "darkColor": "#ef765c",
+      "distance": 1318,
+      "duration": "4时18分",
+      "description": "纵贯华北与江南，在城市天际线与水乡平原之间飞驰。",
+      "stations": [
+        "beijing",
+        "jinan",
+        "nanjing",
+        "suzhou",
+        "shanghai"
+      ],
+      "trains": [
+        {
+          "no": "G1",
+          "from": "北京南",
+          "to": "上海虹桥",
+          "depart": "06:30",
+          "arrive": "11:24",
+          "duration": "4时54分",
+          "note": "12306 查询日 2026-07-15 · 商务 / 一等 / 二等座"
+        },
+        {
+          "no": "G11",
+          "from": "北京南",
+          "to": "上海虹桥",
+          "depart": "10:03",
+          "arrive": "14:39",
+          "duration": "4时36分",
+          "note": "12306 查询日 2026-07-15 · 商务 / 一等 / 二等座"
+        },
+        {
+          "no": "G25",
+          "from": "北京南",
+          "to": "上海虹桥",
+          "depart": "17:00",
+          "arrive": "21:18",
+          "duration": "4时18分",
+          "note": "12306 查询日 2026-07-15 · 商务 / 一等 / 二等座"
+        }
+      ]
+    },
+    {
+      "id": "jingguang",
+      "name": "京广高速铁路",
+      "shortName": "京广高铁",
+      "type": "highspeed",
+      "color": "#386b8c",
+      "darkColor": "#73acd0",
+      "distance": 2298,
+      "duration": "7时17分",
+      "description": "从北国古都一路南下，穿越中原、湖湘，抵达岭南。",
+      "stations": [
+        "beijing",
+        "shijiazhuang",
+        "zhengzhou",
+        "wuhan",
+        "changsha",
+        "guangzhou"
+      ],
+      "trains": [
+        {
+          "no": "G301",
+          "from": "北京西",
+          "to": "广州南",
+          "depart": "08:00",
+          "arrive": "15:36",
+          "duration": "7时36分",
+          "note": "12306 查询日 2026-07-15 · 商务 / 一等 / 二等座"
+        },
+        {
+          "no": "G381",
+          "from": "北京西",
+          "to": "广州南",
+          "depart": "10:00",
+          "arrive": "17:17",
+          "duration": "7时17分",
+          "note": "12306 查询日 2026-07-15 · 商务 / 一等 / 二等座"
+        },
+        {
+          "no": "G305",
+          "from": "北京西",
+          "to": "广州南",
+          "depart": "14:00",
+          "arrive": "21:43",
+          "duration": "7时43分",
+          "note": "12306 查询日 2026-07-15 · 商务 / 一等 / 二等座"
+        }
+      ]
+    },
+    {
+      "id": "xicheng",
+      "name": "西成客运专线",
+      "shortName": "西成高铁",
+      "type": "scenic",
+      "color": "#c98a2e",
+      "darkColor": "#e2ad5a",
+      "distance": 658,
+      "duration": "3时05分",
+      "description": "穿越秦岭腹地，把关中平原、蜀道山川与成都烟火串成一线。",
+      "stations": [
+        "xian",
+        "hanzhong",
+        "guangyuan",
+        "chengdu"
+      ],
+      "trains": [
+        {
+          "no": "D1915",
+          "from": "西安北",
+          "to": "成都东",
+          "depart": "08:50",
+          "arrive": "12:11",
+          "duration": "3时21分",
+          "note": "12306 查询日 2026-07-15 · 一等 / 二等座"
+        },
+        {
+          "no": "G321",
+          "from": "西安北",
+          "to": "成都东",
+          "depart": "11:25",
+          "arrive": "14:30",
+          "duration": "3时05分",
+          "note": "12306 查询日 2026-07-15 · 商务 / 一等 / 二等座"
+        },
+        {
+          "no": "G323",
+          "from": "西安北",
+          "to": "成都东",
+          "depart": "19:17",
+          "arrive": "22:28",
+          "duration": "3时11分",
+          "note": "12306 查询日 2026-07-15 · 商务 / 一等 / 二等座"
+        }
+      ]
+    },
+    {
+      "id": "huming",
+      "name": "沪昆高速铁路",
+      "shortName": "沪昆高铁",
+      "type": "scenic",
+      "color": "#6c7d42",
+      "darkColor": "#a2b96f",
+      "distance": 2252,
+      "duration": "9时35分",
+      "description": "从海派都会向云贵高原延伸，沿途尽览江南、湘西与喀斯特地貌。",
+      "stations": [
+        "shanghai",
+        "hangzhou",
+        "nanchang",
+        "changsha",
+        "guiyang",
+        "kunming"
+      ],
+      "trains": [
+        {
+          "no": "G1371",
+          "from": "上海虹桥",
+          "to": "昆明南",
+          "depart": "07:21",
+          "arrive": "19:03",
+          "duration": "11时42分",
+          "note": "12306 查询日 2026-07-15 · 商务 / 一等 / 二等座"
+        },
+        {
+          "no": "G201",
+          "from": "上海虹桥",
+          "to": "昆明南",
+          "depart": "10:00",
+          "arrive": "19:35",
+          "duration": "9时35分",
+          "note": "12306 查询日 2026-07-15 · 商务 / 一等 / 二等座"
+        },
+        {
+          "no": "G1373",
+          "from": "上海虹桥",
+          "to": "昆明南",
+          "depart": "11:10",
+          "arrive": "23:24",
+          "duration": "12时14分",
+          "note": "12306 查询日 2026-07-15 · 商务 / 一等 / 二等座"
+        }
+      ]
+    }
+  ],
+  "stations": {
+    "beijing": {
+      "name": "北京南站",
+      "lat": 39.865,
+      "lng": 116.379,
+      "tag": "华北枢纽",
+      "description": "连接古都胡同与国家铁路网的起点。",
+      "attractions": [
+        {
+          "name": "天坛公园",
+          "description": "皇家坛庙与古柏林",
+          "rating": "4.8",
+          "distance": "6.2 km",
+          "image": "https://images.unsplash.com/photo-1508804185872-d7badad00f7d?auto=format&fit=crop&w=500&q=80"
+        },
+        {
+          "name": "前门大街",
+          "description": "老字号与京味街巷",
+          "rating": "4.6",
+          "distance": "5.1 km",
+          "image": "https://images.unsplash.com/photo-1547981609-4b6bfe67ca0b?auto=format&fit=crop&w=500&q=80"
+        }
+      ],
+      "scenery": [
+        {
+          "name": "景山日落",
+          "description": "俯瞰北京中轴线",
+          "rating": "推荐",
+          "distance": "9.4 km",
+          "image": "https://images.unsplash.com/photo-1584646098378-0874589d76b1?auto=format&fit=crop&w=500&q=80"
+        }
+      ],
+      "stays": [
+        {
+          "name": "前门四合院",
+          "description": "胡同里的院落住宿",
+          "rating": "¥680起",
+          "distance": "5.4 km",
+          "image": "https://images.unsplash.com/photo-1564501049412-61c2a3083791?auto=format&fit=crop&w=500&q=80"
+        }
+      ]
+    },
+    "jinan": {
+      "name": "济南西站",
+      "lat": 36.668,
+      "lng": 116.89,
+      "tag": "泉城门户",
+      "description": "从高铁站出发，寻访泉水与老城。",
+      "attractions": [
+        {
+          "name": "城市漫游",
+          "description": "从车站出发探索当地人文地标",
+          "rating": "推荐",
+          "distance": "市区",
+          "image": "https://images.unsplash.com/photo-1533105079780-92b9be482077?auto=format&fit=crop&w=500&q=80"
+        }
+      ],
+      "scenery": [
+        {
+          "name": "近郊风景",
+          "description": "适合半日或一日的自然之旅",
+          "rating": "推荐",
+          "distance": "近郊",
+          "image": "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=500&q=80"
+        }
+      ],
+      "stays": [
+        {
+          "name": "车站精选住宿",
+          "description": "交通便利，适合铁路旅行者",
+          "rating": "¥380起",
+          "distance": "3 km内",
+          "image": "https://images.unsplash.com/photo-1566665797739-1674de7a421a?auto=format&fit=crop&w=500&q=80"
+        }
+      ]
+    },
+    "nanjing": {
+      "name": "南京南站",
+      "lat": 31.968,
+      "lng": 118.792,
+      "tag": "江南枢纽",
+      "description": "六朝古都的现代铁路门户。",
+      "attractions": [
+        {
+          "name": "中山陵",
+          "description": "梧桐大道与近代建筑",
+          "rating": "4.8",
+          "distance": "14 km",
+          "image": "https://images.unsplash.com/photo-1561361513-2d000a50f0dc?auto=format&fit=crop&w=500&q=80"
+        },
+        {
+          "name": "夫子庙",
+          "description": "秦淮河畔的旧城夜色",
+          "rating": "4.7",
+          "distance": "8.5 km",
+          "image": "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?auto=format&fit=crop&w=500&q=80"
+        }
+      ],
+      "scenery": [
+        {
+          "name": "近郊风景",
+          "description": "适合半日或一日的自然之旅",
+          "rating": "推荐",
+          "distance": "近郊",
+          "image": "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=500&q=80"
+        }
+      ],
+      "stays": [
+        {
+          "name": "车站精选住宿",
+          "description": "交通便利，适合铁路旅行者",
+          "rating": "¥380起",
+          "distance": "3 km内",
+          "image": "https://images.unsplash.com/photo-1566665797739-1674de7a421a?auto=format&fit=crop&w=500&q=80"
+        }
+      ]
+    },
+    "suzhou": {
+      "name": "苏州北站",
+      "lat": 31.423,
+      "lng": 120.643,
+      "tag": "园林之城",
+      "description": "下车便能开启一场园林与水巷之旅。",
+      "attractions": [
+        {
+          "name": "城市漫游",
+          "description": "从车站出发探索当地人文地标",
+          "rating": "推荐",
+          "distance": "市区",
+          "image": "https://images.unsplash.com/photo-1533105079780-92b9be482077?auto=format&fit=crop&w=500&q=80"
+        }
+      ],
+      "scenery": [
+        {
+          "name": "近郊风景",
+          "description": "适合半日或一日的自然之旅",
+          "rating": "推荐",
+          "distance": "近郊",
+          "image": "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=500&q=80"
+        }
+      ],
+      "stays": [
+        {
+          "name": "车站精选住宿",
+          "description": "交通便利，适合铁路旅行者",
+          "rating": "¥380起",
+          "distance": "3 km内",
+          "image": "https://images.unsplash.com/photo-1566665797739-1674de7a421a?auto=format&fit=crop&w=500&q=80"
+        }
+      ]
+    },
+    "shanghai": {
+      "name": "上海虹桥站",
+      "lat": 31.194,
+      "lng": 121.327,
+      "tag": "华东枢纽",
+      "description": "铁路、航空与城市交通交汇的超级枢纽。",
+      "attractions": [
+        {
+          "name": "外滩",
+          "description": "万国建筑与浦江夜景",
+          "rating": "4.9",
+          "distance": "19 km",
+          "image": "https://images.unsplash.com/photo-1537531383496-f4749b8032cf?auto=format&fit=crop&w=500&q=80"
+        },
+        {
+          "name": "武康路",
+          "description": "梧桐树下的城市漫步",
+          "rating": "4.7",
+          "distance": "12 km",
+          "image": "https://images.unsplash.com/photo-1548919973-5cef591cdbc9?auto=format&fit=crop&w=500&q=80"
+        }
+      ],
+      "scenery": [
+        {
+          "name": "近郊风景",
+          "description": "适合半日或一日的自然之旅",
+          "rating": "推荐",
+          "distance": "近郊",
+          "image": "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=500&q=80"
+        }
+      ],
+      "stays": [
+        {
+          "name": "衡山路精品酒店",
+          "description": "安静街区与梧桐景观",
+          "rating": "¥720起",
+          "distance": "11 km",
+          "image": "https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=500&q=80"
+        }
+      ]
+    },
+    "shijiazhuang": {
+      "name": "石家庄站",
+      "lat": 38.01,
+      "lng": 114.484,
+      "tag": "燕赵枢纽",
+      "description": "通往太行山与古城正定的中转站。",
+      "attractions": [
+        {
+          "name": "城市漫游",
+          "description": "从车站出发探索当地人文地标",
+          "rating": "推荐",
+          "distance": "市区",
+          "image": "https://images.unsplash.com/photo-1533105079780-92b9be482077?auto=format&fit=crop&w=500&q=80"
+        }
+      ],
+      "scenery": [
+        {
+          "name": "近郊风景",
+          "description": "适合半日或一日的自然之旅",
+          "rating": "推荐",
+          "distance": "近郊",
+          "image": "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=500&q=80"
+        }
+      ],
+      "stays": [
+        {
+          "name": "车站精选住宿",
+          "description": "交通便利，适合铁路旅行者",
+          "rating": "¥380起",
+          "distance": "3 km内",
+          "image": "https://images.unsplash.com/photo-1566665797739-1674de7a421a?auto=format&fit=crop&w=500&q=80"
+        }
+      ]
+    },
+    "zhengzhou": {
+      "name": "郑州东站",
+      "lat": 34.755,
+      "lng": 113.783,
+      "tag": "中原枢纽",
+      "description": "八方铁路在中原腹地交汇。",
+      "attractions": [
+        {
+          "name": "城市漫游",
+          "description": "从车站出发探索当地人文地标",
+          "rating": "推荐",
+          "distance": "市区",
+          "image": "https://images.unsplash.com/photo-1533105079780-92b9be482077?auto=format&fit=crop&w=500&q=80"
+        }
+      ],
+      "scenery": [
+        {
+          "name": "近郊风景",
+          "description": "适合半日或一日的自然之旅",
+          "rating": "推荐",
+          "distance": "近郊",
+          "image": "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=500&q=80"
+        }
+      ],
+      "stays": [
+        {
+          "name": "车站精选住宿",
+          "description": "交通便利，适合铁路旅行者",
+          "rating": "¥380起",
+          "distance": "3 km内",
+          "image": "https://images.unsplash.com/photo-1566665797739-1674de7a421a?auto=format&fit=crop&w=500&q=80"
+        }
+      ]
+    },
+    "wuhan": {
+      "name": "武汉站",
+      "lat": 30.607,
+      "lng": 114.424,
+      "tag": "江城门户",
+      "description": "从高铁站去看长江、东湖和百年街区。",
+      "attractions": [
+        {
+          "name": "湖北省博物馆",
+          "description": "曾侯乙编钟与楚文化",
+          "rating": "4.8",
+          "distance": "8.6 km",
+          "image": "https://images.unsplash.com/photo-1564399579883-451a5d44ec08?auto=format&fit=crop&w=500&q=80"
+        },
+        {
+          "name": "黄鹤楼",
+          "description": "登楼远眺长江与三镇",
+          "rating": "4.6",
+          "distance": "14 km",
+          "image": "https://images.unsplash.com/photo-1598935898639-81586f7d2129?auto=format&fit=crop&w=500&q=80"
+        }
+      ],
+      "scenery": [
+        {
+          "name": "近郊风景",
+          "description": "适合半日或一日的自然之旅",
+          "rating": "推荐",
+          "distance": "近郊",
+          "image": "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=500&q=80"
+        }
+      ],
+      "stays": [
+        {
+          "name": "车站精选住宿",
+          "description": "交通便利，适合铁路旅行者",
+          "rating": "¥380起",
+          "distance": "3 km内",
+          "image": "https://images.unsplash.com/photo-1566665797739-1674de7a421a?auto=format&fit=crop&w=500&q=80"
+        }
+      ]
+    },
+    "changsha": {
+      "name": "长沙南站",
+      "lat": 28.147,
+      "lng": 113.064,
+      "tag": "湖湘门户",
+      "description": "一站抵达山水洲城与热辣烟火。",
+      "attractions": [
+        {
+          "name": "城市漫游",
+          "description": "从车站出发探索当地人文地标",
+          "rating": "推荐",
+          "distance": "市区",
+          "image": "https://images.unsplash.com/photo-1533105079780-92b9be482077?auto=format&fit=crop&w=500&q=80"
+        }
+      ],
+      "scenery": [
+        {
+          "name": "近郊风景",
+          "description": "适合半日或一日的自然之旅",
+          "rating": "推荐",
+          "distance": "近郊",
+          "image": "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=500&q=80"
+        }
+      ],
+      "stays": [
+        {
+          "name": "车站精选住宿",
+          "description": "交通便利，适合铁路旅行者",
+          "rating": "¥380起",
+          "distance": "3 km内",
+          "image": "https://images.unsplash.com/photo-1566665797739-1674de7a421a?auto=format&fit=crop&w=500&q=80"
+        }
+      ]
+    },
+    "guangzhou": {
+      "name": "广州南站",
+      "lat": 22.99,
+      "lng": 113.269,
+      "tag": "岭南枢纽",
+      "description": "连接粤港澳大湾区的繁忙门户。",
+      "attractions": [
+        {
+          "name": "城市漫游",
+          "description": "从车站出发探索当地人文地标",
+          "rating": "推荐",
+          "distance": "市区",
+          "image": "https://images.unsplash.com/photo-1533105079780-92b9be482077?auto=format&fit=crop&w=500&q=80"
+        }
+      ],
+      "scenery": [
+        {
+          "name": "近郊风景",
+          "description": "适合半日或一日的自然之旅",
+          "rating": "推荐",
+          "distance": "近郊",
+          "image": "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=500&q=80"
+        }
+      ],
+      "stays": [
+        {
+          "name": "车站精选住宿",
+          "description": "交通便利，适合铁路旅行者",
+          "rating": "¥380起",
+          "distance": "3 km内",
+          "image": "https://images.unsplash.com/photo-1566665797739-1674de7a421a?auto=format&fit=crop&w=500&q=80"
+        }
+      ]
+    },
+    "xian": {
+      "name": "西安北站",
+      "lat": 34.378,
+      "lng": 108.94,
+      "tag": "关中枢纽",
+      "description": "从盛唐长安出发，向秦岭与巴蜀前行。",
+      "attractions": [
+        {
+          "name": "西安城墙",
+          "description": "骑行在完整古城垣之上",
+          "rating": "4.8",
+          "distance": "13 km",
+          "image": "https://images.unsplash.com/photo-1591123720164-de1348028a82?auto=format&fit=crop&w=500&q=80"
+        },
+        {
+          "name": "大唐不夜城",
+          "description": "盛唐主题步行街夜游",
+          "rating": "4.7",
+          "distance": "20 km",
+          "image": "https://images.unsplash.com/photo-1627624676456-63a20c7b12bd?auto=format&fit=crop&w=500&q=80"
+        }
+      ],
+      "scenery": [
+        {
+          "name": "近郊风景",
+          "description": "适合半日或一日的自然之旅",
+          "rating": "推荐",
+          "distance": "近郊",
+          "image": "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=500&q=80"
+        }
+      ],
+      "stays": [
+        {
+          "name": "车站精选住宿",
+          "description": "交通便利，适合铁路旅行者",
+          "rating": "¥380起",
+          "distance": "3 km内",
+          "image": "https://images.unsplash.com/photo-1566665797739-1674de7a421a?auto=format&fit=crop&w=500&q=80"
+        }
+      ]
+    },
+    "hanzhong": {
+      "name": "汉中站",
+      "lat": 33.073,
+      "lng": 107.034,
+      "tag": "秦巴山城",
+      "description": "在秦岭与巴山之间寻找油菜花海和古蜀道。",
+      "attractions": [
+        {
+          "name": "城市漫游",
+          "description": "从车站出发探索当地人文地标",
+          "rating": "推荐",
+          "distance": "市区",
+          "image": "https://images.unsplash.com/photo-1533105079780-92b9be482077?auto=format&fit=crop&w=500&q=80"
+        }
+      ],
+      "scenery": [
+        {
+          "name": "汉中油菜花海",
+          "description": "春日金色田野与秦巴远山",
+          "rating": "3—4月",
+          "distance": "约25 km",
+          "image": "https://images.unsplash.com/photo-1490750967868-88aa4486c946?auto=format&fit=crop&w=500&q=80"
+        },
+        {
+          "name": "黎坪国家森林公园",
+          "description": "红叶、峡谷与高山溪流",
+          "rating": "推荐",
+          "distance": "约65 km",
+          "image": "https://images.unsplash.com/photo-1448375240586-882707db888b?auto=format&fit=crop&w=500&q=80"
+        }
+      ],
+      "stays": [
+        {
+          "name": "车站精选住宿",
+          "description": "交通便利，适合铁路旅行者",
+          "rating": "¥380起",
+          "distance": "3 km内",
+          "image": "https://images.unsplash.com/photo-1566665797739-1674de7a421a?auto=format&fit=crop&w=500&q=80"
+        }
+      ]
+    },
+    "guangyuan": {
+      "name": "广元站",
+      "lat": 32.44,
+      "lng": 105.84,
+      "tag": "蜀道门户",
+      "description": "循着剑门蜀道，进入层叠山川。",
+      "attractions": [
+        {
+          "name": "城市漫游",
+          "description": "从车站出发探索当地人文地标",
+          "rating": "推荐",
+          "distance": "市区",
+          "image": "https://images.unsplash.com/photo-1533105079780-92b9be482077?auto=format&fit=crop&w=500&q=80"
+        }
+      ],
+      "scenery": [
+        {
+          "name": "近郊风景",
+          "description": "适合半日或一日的自然之旅",
+          "rating": "推荐",
+          "distance": "近郊",
+          "image": "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=500&q=80"
+        }
+      ],
+      "stays": [
+        {
+          "name": "车站精选住宿",
+          "description": "交通便利，适合铁路旅行者",
+          "rating": "¥380起",
+          "distance": "3 km内",
+          "image": "https://images.unsplash.com/photo-1566665797739-1674de7a421a?auto=format&fit=crop&w=500&q=80"
+        }
+      ]
+    },
+    "chengdu": {
+      "name": "成都东站",
+      "lat": 30.629,
+      "lng": 104.14,
+      "tag": "天府枢纽",
+      "description": "抵达成都，从茶馆、美食到雪山脚下。",
+      "attractions": [
+        {
+          "name": "成都大熊猫基地",
+          "description": "看大熊猫晨间活动",
+          "rating": "4.8",
+          "distance": "17 km",
+          "image": "https://images.unsplash.com/photo-1564349683136-77e08dba1ef7?auto=format&fit=crop&w=500&q=80"
+        },
+        {
+          "name": "宽窄巷子",
+          "description": "老成都院落与市井生活",
+          "rating": "4.5",
+          "distance": "12 km",
+          "image": "https://images.unsplash.com/photo-1545893835-abaa50cbe628?auto=format&fit=crop&w=500&q=80"
+        }
+      ],
+      "scenery": [
+        {
+          "name": "近郊风景",
+          "description": "适合半日或一日的自然之旅",
+          "rating": "推荐",
+          "distance": "近郊",
+          "image": "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=500&q=80"
+        }
+      ],
+      "stays": [
+        {
+          "name": "太古里设计酒店",
+          "description": "城市中心的现代川西体验",
+          "rating": "¥860起",
+          "distance": "8 km",
+          "image": "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=500&q=80"
+        }
+      ]
+    },
+    "hangzhou": {
+      "name": "杭州东站",
+      "lat": 30.293,
+      "lng": 120.212,
+      "tag": "钱塘门户",
+      "description": "下车后，在西湖与茶山之间慢下来。",
+      "attractions": [
+        {
+          "name": "城市漫游",
+          "description": "从车站出发探索当地人文地标",
+          "rating": "推荐",
+          "distance": "市区",
+          "image": "https://images.unsplash.com/photo-1533105079780-92b9be482077?auto=format&fit=crop&w=500&q=80"
+        }
+      ],
+      "scenery": [
+        {
+          "name": "近郊风景",
+          "description": "适合半日或一日的自然之旅",
+          "rating": "推荐",
+          "distance": "近郊",
+          "image": "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=500&q=80"
+        }
+      ],
+      "stays": [
+        {
+          "name": "车站精选住宿",
+          "description": "交通便利，适合铁路旅行者",
+          "rating": "¥380起",
+          "distance": "3 km内",
+          "image": "https://images.unsplash.com/photo-1566665797739-1674de7a421a?auto=format&fit=crop&w=500&q=80"
+        }
+      ]
+    },
+    "nanchang": {
+      "name": "南昌西站",
+      "lat": 28.623,
+      "lng": 115.793,
+      "tag": "赣鄱枢纽",
+      "description": "沿赣江进入英雄城，也通往庐山与婺源。",
+      "attractions": [
+        {
+          "name": "城市漫游",
+          "description": "从车站出发探索当地人文地标",
+          "rating": "推荐",
+          "distance": "市区",
+          "image": "https://images.unsplash.com/photo-1533105079780-92b9be482077?auto=format&fit=crop&w=500&q=80"
+        }
+      ],
+      "scenery": [
+        {
+          "name": "近郊风景",
+          "description": "适合半日或一日的自然之旅",
+          "rating": "推荐",
+          "distance": "近郊",
+          "image": "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=500&q=80"
+        }
+      ],
+      "stays": [
+        {
+          "name": "车站精选住宿",
+          "description": "交通便利，适合铁路旅行者",
+          "rating": "¥380起",
+          "distance": "3 km内",
+          "image": "https://images.unsplash.com/photo-1566665797739-1674de7a421a?auto=format&fit=crop&w=500&q=80"
+        }
+      ]
+    },
+    "guiyang": {
+      "name": "贵阳北站",
+      "lat": 26.618,
+      "lng": 106.674,
+      "tag": "黔中门户",
+      "description": "从城市出发，探访瀑布、苗寨与喀斯特峰林。",
+      "attractions": [
+        {
+          "name": "城市漫游",
+          "description": "从车站出发探索当地人文地标",
+          "rating": "推荐",
+          "distance": "市区",
+          "image": "https://images.unsplash.com/photo-1533105079780-92b9be482077?auto=format&fit=crop&w=500&q=80"
+        }
+      ],
+      "scenery": [
+        {
+          "name": "近郊风景",
+          "description": "适合半日或一日的自然之旅",
+          "rating": "推荐",
+          "distance": "近郊",
+          "image": "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=500&q=80"
+        }
+      ],
+      "stays": [
+        {
+          "name": "车站精选住宿",
+          "description": "交通便利，适合铁路旅行者",
+          "rating": "¥380起",
+          "distance": "3 km内",
+          "image": "https://images.unsplash.com/photo-1566665797739-1674de7a421a?auto=format&fit=crop&w=500&q=80"
+        }
+      ]
+    },
+    "kunming": {
+      "name": "昆明南站",
+      "lat": 24.88,
+      "lng": 102.832,
+      "tag": "春城门户",
+      "description": "四季如春的终点，也是通往滇南的起点。",
+      "attractions": [
+        {
+          "name": "城市漫游",
+          "description": "从车站出发探索当地人文地标",
+          "rating": "推荐",
+          "distance": "市区",
+          "image": "https://images.unsplash.com/photo-1533105079780-92b9be482077?auto=format&fit=crop&w=500&q=80"
+        }
+      ],
+      "scenery": [
+        {
+          "name": "滇池海埂",
+          "description": "冬日观鸥与西山剪影",
+          "rating": "推荐",
+          "distance": "31 km",
+          "image": "https://images.unsplash.com/photo-1470770841072-f978cf4d019e?auto=format&fit=crop&w=500&q=80"
+        },
+        {
+          "name": "石林风景区",
+          "description": "世界自然遗产喀斯特奇观",
+          "rating": "4.7",
+          "distance": "64 km",
+          "image": "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=500&q=80"
+        }
+      ],
+      "stays": [
+        {
+          "name": "翠湖边精品民宿",
+          "description": "步行探索昆明老街",
+          "rating": "¥420起",
+          "distance": "29 km",
+          "image": "https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?auto=format&fit=crop&w=500&q=80"
+        }
+      ]
+    }
+  }
+}

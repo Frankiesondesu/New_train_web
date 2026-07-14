@@ -1,125 +1,34 @@
-const routes = [
-  {
-    id: "jinghu",
-    name: "京沪高速铁路",
-    shortName: "京沪高铁",
-    type: "highspeed",
-    color: "#c24d33",
-    darkColor: "#ef765c",
-    distance: 1318,
-    duration: "4时18分",
-    description: "纵贯华北与江南，在城市天际线与水乡平原之间飞驰。",
-    stations: ["beijing", "jinan", "nanjing", "suzhou", "shanghai"],
-    trains: [
-      { no: "G1", from: "北京南", to: "上海虹桥", depart: "07:00", arrive: "11:32", duration: "4时32分", note: "每日开行 · 商务座 / 一等座 / 二等座" },
-      { no: "G5", from: "北京南", to: "上海虹桥", depart: "09:00", arrive: "13:37", duration: "4时37分", note: "每日开行 · 复兴号智能动车组" },
-      { no: "G11", from: "北京南", to: "上海虹桥", depart: "12:00", arrive: "16:38", duration: "4时38分", note: "每日开行 · 大站快车" }
-    ]
-  },
-  {
-    id: "jingguang",
-    name: "京广高速铁路",
-    shortName: "京广高铁",
-    type: "highspeed",
-    color: "#386b8c",
-    darkColor: "#73acd0",
-    distance: 2298,
-    duration: "7时16分",
-    description: "从北国古都一路南下，穿越中原、湖湘，抵达岭南。",
-    stations: ["beijing", "shijiazhuang", "zhengzhou", "wuhan", "changsha", "guangzhou"],
-    trains: [
-      { no: "G77", from: "北京西", to: "广州南", depart: "08:00", arrive: "15:39", duration: "7时39分", note: "每日开行 · 复兴号" },
-      { no: "G79", from: "北京西", to: "广州南", depart: "10:00", arrive: "17:22", duration: "7时22分", note: "每日开行 · 大站快车" }
-    ]
-  },
-  {
-    id: "xicheng",
-    name: "西成客运专线",
-    shortName: "西成高铁",
-    type: "scenic",
-    color: "#c98a2e",
-    darkColor: "#e2ad5a",
-    distance: 658,
-    duration: "3时31分",
-    description: "穿越秦岭腹地，把关中平原、蜀道山川与成都烟火串成一线。",
-    stations: ["xian", "hanzhong", "guangyuan", "chengdu"],
-    trains: [
-      { no: "D1911", from: "西安北", to: "成都东", depart: "07:05", arrive: "10:42", duration: "3时37分", note: "每日开行 · 沿途山景" },
-      { no: "G89", from: "西安北", to: "成都东", depart: "13:12", arrive: "16:38", duration: "3时26分", note: "每日开行 · 复兴号" }
-    ]
-  },
-  {
-    id: "huming",
-    name: "沪昆高速铁路",
-    shortName: "沪昆高铁",
-    type: "scenic",
-    color: "#6c7d42",
-    darkColor: "#a2b96f",
-    distance: 2252,
-    duration: "10时42分",
-    description: "从海派都会向云贵高原延伸，沿途尽览江南、湘西与喀斯特地貌。",
-    stations: ["shanghai", "hangzhou", "nanchang", "changsha", "guiyang", "kunming"],
-    trains: [
-      { no: "G1373", from: "上海虹桥", to: "昆明南", depart: "08:53", arrive: "19:34", duration: "10时41分", note: "每日开行 · 跨越五省" },
-      { no: "G1375", from: "上海虹桥", to: "昆明南", depart: "11:11", arrive: "22:01", duration: "10时50分", note: "每日开行 · 沿途风景丰富" }
-    ]
+﻿let routes = [];
+let stations = {};
+let dataSource = {};
+
+loadRailwayData();
+
+async function loadRailwayData() {
+  try {
+    const response = await fetch("data/railway-data.json");
+    if (!response.ok) throw new Error(`铁路数据加载失败：${response.status}`);
+    initApp(await response.json());
+  } catch (error) {
+    const panelContent = document.getElementById("panel-content");
+    if (panelContent) {
+      panelContent.innerHTML = `
+        <div class="panel-inner">
+          <p class="eyebrow">DATA UNAVAILABLE</p>
+          <div class="panel-title-row">
+            <span class="panel-icon">!</span>
+            <div><h1>铁路数据暂时不可用</h1><p>${error.message}</p></div>
+          </div>
+        </div>`;
+    }
+    console.error(error);
   }
-];
-
-const stations = {
-  beijing: station("北京南站", 39.865, 116.379, "华北枢纽", "连接古都胡同与国家铁路网的起点。", {
-    attractions: [place("天坛公园", "皇家坛庙与古柏林", "4.8", "6.2 km", "https://images.unsplash.com/photo-1508804185872-d7badad00f7d?auto=format&fit=crop&w=500&q=80"), place("前门大街", "老字号与京味街巷", "4.6", "5.1 km", "https://images.unsplash.com/photo-1547981609-4b6bfe67ca0b?auto=format&fit=crop&w=500&q=80")],
-    scenery: [place("景山日落", "俯瞰北京中轴线", "推荐", "9.4 km", "https://images.unsplash.com/photo-1584646098378-0874589d76b1?auto=format&fit=crop&w=500&q=80")],
-    stays: [place("前门四合院", "胡同里的院落住宿", "¥680起", "5.4 km", "https://images.unsplash.com/photo-1564501049412-61c2a3083791?auto=format&fit=crop&w=500&q=80")]
-  }),
-  jinan: station("济南西站", 36.668, 116.89, "泉城门户", "从高铁站出发，寻访泉水与老城。"),
-  nanjing: station("南京南站", 31.968, 118.792, "江南枢纽", "六朝古都的现代铁路门户。", {
-    attractions: [place("中山陵", "梧桐大道与近代建筑", "4.8", "14 km", "https://images.unsplash.com/photo-1561361513-2d000a50f0dc?auto=format&fit=crop&w=500&q=80"), place("夫子庙", "秦淮河畔的旧城夜色", "4.7", "8.5 km", "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?auto=format&fit=crop&w=500&q=80")]
-  }),
-  suzhou: station("苏州北站", 31.423, 120.643, "园林之城", "下车便能开启一场园林与水巷之旅。"),
-  shanghai: station("上海虹桥站", 31.194, 121.327, "华东枢纽", "铁路、航空与城市交通交汇的超级枢纽。", {
-    attractions: [place("外滩", "万国建筑与浦江夜景", "4.9", "19 km", "https://images.unsplash.com/photo-1537531383496-f4749b8032cf?auto=format&fit=crop&w=500&q=80"), place("武康路", "梧桐树下的城市漫步", "4.7", "12 km", "https://images.unsplash.com/photo-1548919973-5cef591cdbc9?auto=format&fit=crop&w=500&q=80")],
-    stays: [place("衡山路精品酒店", "安静街区与梧桐景观", "¥720起", "11 km", "https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=500&q=80")]
-  }),
-  shijiazhuang: station("石家庄站", 38.01, 114.484, "燕赵枢纽", "通往太行山与古城正定的中转站。"),
-  zhengzhou: station("郑州东站", 34.755, 113.783, "中原枢纽", "八方铁路在中原腹地交汇。"),
-  wuhan: station("武汉站", 30.607, 114.424, "江城门户", "从高铁站去看长江、东湖和百年街区。", {
-    attractions: [place("湖北省博物馆", "曾侯乙编钟与楚文化", "4.8", "8.6 km", "https://images.unsplash.com/photo-1564399579883-451a5d44ec08?auto=format&fit=crop&w=500&q=80"), place("黄鹤楼", "登楼远眺长江与三镇", "4.6", "14 km", "https://images.unsplash.com/photo-1598935898639-81586f7d2129?auto=format&fit=crop&w=500&q=80")]
-  }),
-  changsha: station("长沙南站", 28.147, 113.064, "湖湘门户", "一站抵达山水洲城与热辣烟火。"),
-  guangzhou: station("广州南站", 22.99, 113.269, "岭南枢纽", "连接粤港澳大湾区的繁忙门户。"),
-  xian: station("西安北站", 34.378, 108.94, "关中枢纽", "从盛唐长安出发，向秦岭与巴蜀前行。", {
-    attractions: [place("西安城墙", "骑行在完整古城垣之上", "4.8", "13 km", "https://images.unsplash.com/photo-1591123720164-de1348028a82?auto=format&fit=crop&w=500&q=80"), place("大唐不夜城", "盛唐主题步行街夜游", "4.7", "20 km", "https://images.unsplash.com/photo-1627624676456-63a20c7b12bd?auto=format&fit=crop&w=500&q=80")]
-  }),
-  hanzhong: station("汉中站", 33.073, 107.034, "秦巴山城", "在秦岭与巴山之间寻找油菜花海和古蜀道。", {
-    scenery: [place("汉中油菜花海", "春日金色田野与秦巴远山", "3—4月", "约25 km", "https://images.unsplash.com/photo-1490750967868-88aa4486c946?auto=format&fit=crop&w=500&q=80"), place("黎坪国家森林公园", "红叶、峡谷与高山溪流", "推荐", "约65 km", "https://images.unsplash.com/photo-1448375240586-882707db888b?auto=format&fit=crop&w=500&q=80")]
-  }),
-  guangyuan: station("广元站", 32.44, 105.84, "蜀道门户", "循着剑门蜀道，进入层叠山川。"),
-  chengdu: station("成都东站", 30.629, 104.14, "天府枢纽", "抵达成都，从茶馆、美食到雪山脚下。", {
-    attractions: [place("成都大熊猫基地", "看大熊猫晨间活动", "4.8", "17 km", "https://images.unsplash.com/photo-1564349683136-77e08dba1ef7?auto=format&fit=crop&w=500&q=80"), place("宽窄巷子", "老成都院落与市井生活", "4.5", "12 km", "https://images.unsplash.com/photo-1545893835-abaa50cbe628?auto=format&fit=crop&w=500&q=80")],
-    stays: [place("太古里设计酒店", "城市中心的现代川西体验", "¥860起", "8 km", "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=500&q=80")]
-  }),
-  hangzhou: station("杭州东站", 30.293, 120.212, "钱塘门户", "下车后，在西湖与茶山之间慢下来。"),
-  nanchang: station("南昌西站", 28.623, 115.793, "赣鄱枢纽", "沿赣江进入英雄城，也通往庐山与婺源。"),
-  guiyang: station("贵阳北站", 26.618, 106.674, "黔中门户", "从城市出发，探访瀑布、苗寨与喀斯特峰林。"),
-  kunming: station("昆明南站", 24.88, 102.832, "春城门户", "四季如春的终点，也是通往滇南的起点。", {
-    scenery: [place("滇池海埂", "冬日观鸥与西山剪影", "推荐", "31 km", "https://images.unsplash.com/photo-1470770841072-f978cf4d019e?auto=format&fit=crop&w=500&q=80"), place("石林风景区", "世界自然遗产喀斯特奇观", "4.7", "64 km", "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=500&q=80")],
-    stays: [place("翠湖边精品民宿", "步行探索昆明老街", "¥420起", "29 km", "https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?auto=format&fit=crop&w=500&q=80")]
-  })
-};
-
-function station(name, lat, lng, tag, description, content = {}) {
-  return {
-    name, lat, lng, tag, description,
-    attractions: content.attractions || [place("城市漫游", "从车站出发探索当地人文地标", "推荐", "市区", "https://images.unsplash.com/photo-1533105079780-92b9be482077?auto=format&fit=crop&w=500&q=80")],
-    scenery: content.scenery || [place("近郊风景", "适合半日或一日的自然之旅", "推荐", "近郊", "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=500&q=80")],
-    stays: content.stays || [place("车站精选住宿", "交通便利，适合铁路旅行者", "¥380起", "3 km内", "https://images.unsplash.com/photo-1566665797739-1674de7a421a?auto=format&fit=crop&w=500&q=80")]
-  };
 }
 
-function place(name, description, rating, distance, image) {
-  return { name, description, rating, distance, image };
-}
+function initApp(data) {
+  routes = data.routes || [];
+  stations = data.stations || {};
+  dataSource = data.source || {};
 
 function routeDisplayColor(route) {
   return document.documentElement.dataset.theme === "dark" ? route.darkColor : route.color;
@@ -273,7 +182,7 @@ function renderWelcome() {
       <div class="stat-row">
         <div class="stat"><b>${routes.length}</b><span>精选线路</span></div>
         <div class="stat"><b>${Object.keys(stations).length}</b><span>沿途车站</span></div>
-        <div class="stat"><b>${routes.reduce((sum, route) => sum + route.trains.length, 0)}</b><span>示例车次</span></div>
+        <div class="stat"><b>${routes.reduce((sum, route) => sum + route.trains.length, 0)}</b><span>真实车次</span></div>
       </div>
       <div class="panel-divider"></div>
       <div class="section-heading"><h2>精选铁路线路</h2><span>点击查看车次</span></div>
@@ -285,7 +194,7 @@ function renderWelcome() {
             <span class="route-arrow">›</span>
           </button>`).join("")}
       </div>
-      <div class="hint-box">${icon("pointer")}<span>地图上的彩色线条代表铁路线路，圆点代表主要车站。选择任意节点开始探索。</span></div>
+      <div class="hint-box">${icon("pointer")}<span>地图上的彩色线条代表铁路线路，圆点代表主要车站。车次时刻取自 ${dataSource.provider} ${dataSource.scheduleDate} 查询结果。</span></div>
     </div>`;
   bindPanelEvents();
 }
@@ -311,7 +220,7 @@ function renderRoute(route) {
       <div class="panel-divider"></div>
       <div class="section-heading"><h2>代表车次</h2><span>${route.trains.length} 趟</span></div>
       <div class="train-list">${route.trains.map(trainCard).join("")}</div>
-      <div class="hint-box">${icon("info")}<span>车次与时刻为产品演示数据。实际出行前，请以铁路官方售票平台为准。</span></div>
+      <div class="hint-box">${icon("info")}<span>车次与时刻取自 ${dataSource.provider} ${dataSource.scheduleDate} 查询结果。实际出行前，请以铁路官方售票平台为准。</span></div>
     </div>`;
   bindPanelEvents();
 }
@@ -505,3 +414,7 @@ window.addEventListener("load", resizeMap, { once: true });
 applyTheme(document.documentElement.dataset.theme || "light", false);
 
 renderWelcome();
+
+}
+
+

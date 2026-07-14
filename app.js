@@ -83,15 +83,15 @@ function scheduleTileHealthCheck() {
 }
 
 function updateMapStatus() {
-  if (tilesDegraded) {
+  if (tilesDegraded && geometryUnavailable) {
     mapStatusTitle.textContent = "底图加载不稳定";
-    mapStatusMessage.textContent = "在线地图瓦片加载失败较多，已自动切换到行政区划底图。线路、车站和搜索仍可正常使用。";
+    mapStatusMessage.textContent = "在线地图瓦片加载失败较多，备用行政区划底图也暂时不可用。线路、车站和搜索仍可正常使用。";
     mapStatus.hidden = false;
     return;
   }
-  if (geometryUnavailable) {
-    mapStatusTitle.textContent = "行政区划底图加载失败";
-    mapStatusMessage.textContent = "备用地图轮廓暂时不可用，但线路、车站和车次信息仍可正常查看。";
+  if (tilesDegraded) {
+    mapStatusTitle.textContent = "底图加载不稳定";
+    mapStatusMessage.textContent = "在线地图瓦片加载失败较多，已自动切换到行政区划底图。线路、车站和搜索仍可正常使用。";
     mapStatus.hidden = false;
     return;
   }

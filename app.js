@@ -383,17 +383,49 @@ document.addEventListener("click", event => {
   if (!event.target.closest(".global-search")) searchResults.hidden = true;
 });
 
+function normalizeSearchTerm(value) {
+  return String(value || "").toLowerCase().replace(/\s+/g, "");
+}
+
+function matchesSearch(terms, keyword) {
+  return terms.some(term => normalizeSearchTerm(term).includes(keyword));
+}
+
+function stationSearchTerms(id, item) {
+  const places = ["attractions", "scenery", "stays"].flatMap(key => item[key] || []);
+  return [
+    item.name,
+    item.tag,
+    item.description,
+    ...(item.aliases || []),
+    ...places.flatMap(place => [place.name, place.description, place.rating, place.distance])
+  ];
+}
+
+function routeSearchTerms(route) {
+  return [
+    route.name,
+    route.shortName,
+    route.description,
+    ...(route.aliases || []),
+    ...route.stations.flatMap(id => [stations[id]?.name, ...(stations[id]?.aliases || [])]),
+    ...route.trains.flatMap(train => [train.no, train.from, train.to, train.depart, train.arrive])
+  ];
+}
+
 function renderSearch(query) {
-  const keyword = query.trim().toLowerCase();
+  const keyword = normalizeSearchTerm(query);
   if (!keyword) { searchResults.hidden = true; return; }
   const results = [];
   Object.entries(stations).forEach(([id, item]) => {
-    if (item.name.toLowerCase().includes(keyword)) results.push({ id, name: item.name, type: "车站", kind: "station" });
+    if (matchesSearch(stationSearchTerms(id, item), keyword)) results.push({ id, name: item.name, type: "车站/周边", kind: "station" });
   });
   routes.forEach(route => {
-    if (`${route.name}${route.shortName}`.toLowerCase().includes(keyword)) results.push({ id: route.id, name: route.shortName, type: "线路", kind: "route" });
+    if (matchesSearch(routeSearchTerms(route), keyword)) results.push({ id: route.id, name: route.shortName, type: "线路", kind: "route" });
     route.trains.forEach(train => {
-      if (train.no.toLowerCase().includes(keyword)) results.push({ id: route.id, name: `${train.no} · ${train.from}—${train.to}`, type: "车次", kind: "route" });
+      if (matchesSearch([train.no, train.from, train.to, train.depart, train.arrive], keyword)) {
+        results.push({ id: route.id, name: `${train.no} · ${train.from}—${train.to}`, type: "车次", kind: "route" });
+      }
     });
   });
   searchResults.innerHTML = results.length

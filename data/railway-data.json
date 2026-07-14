@@ -51,6 +51,14 @@
           "duration": "4时18分",
           "note": "12306 查询日 2026-07-15 · 商务 / 一等 / 二等座"
         }
+      ],
+      "aliases": [
+        "??",
+        "????",
+        "????",
+        "beijing shanghai",
+        "jinghu",
+        "shanghai beijing"
       ]
     },
     {
@@ -99,6 +107,14 @@
           "duration": "7时43分",
           "note": "12306 查询日 2026-07-15 · 商务 / 一等 / 二等座"
         }
+      ],
+      "aliases": [
+        "??",
+        "????",
+        "????",
+        "beijing guangzhou",
+        "jingguang",
+        "guangzhou beijing"
       ]
     },
     {
@@ -145,6 +161,14 @@
           "duration": "3时11分",
           "note": "12306 查询日 2026-07-15 · 商务 / 一等 / 二等座"
         }
+      ],
+      "aliases": [
+        "??",
+        "????",
+        "????",
+        "xian chengdu",
+        "xicheng",
+        "chengdu xian"
       ]
     },
     {
@@ -193,6 +217,14 @@
           "duration": "12时14分",
           "note": "12306 查询日 2026-07-15 · 商务 / 一等 / 二等座"
         }
+      ],
+      "aliases": [
+        "??",
+        "????",
+        "????",
+        "shanghai kunming",
+        "huming",
+        "kunming shanghai"
       ]
     }
   ],
@@ -236,6 +268,14 @@
           "distance": "5.4 km",
           "image": "https://images.unsplash.com/photo-1564501049412-61c2a3083791?auto=format&fit=crop&w=500&q=80"
         }
+      ],
+      "aliases": [
+        "??",
+        "???",
+        "beijing",
+        "beijingnan",
+        "bjn",
+        "VNP"
       ]
     },
     "jinan": {
@@ -270,6 +310,13 @@
           "distance": "3 km内",
           "image": "https://images.unsplash.com/photo-1566665797739-1674de7a421a?auto=format&fit=crop&w=500&q=80"
         }
+      ],
+      "aliases": [
+        "??",
+        "???",
+        "jinan",
+        "jinanxi",
+        "jnx"
       ]
     },
     "nanjing": {
@@ -311,6 +358,13 @@
           "distance": "3 km内",
           "image": "https://images.unsplash.com/photo-1566665797739-1674de7a421a?auto=format&fit=crop&w=500&q=80"
         }
+      ],
+      "aliases": [
+        "??",
+        "???",
+        "nanjing",
+        "nanjingnan",
+        "njn"
       ]
     },
     "suzhou": {
@@ -345,6 +399,13 @@
           "distance": "3 km内",
           "image": "https://images.unsplash.com/photo-1566665797739-1674de7a421a?auto=format&fit=crop&w=500&q=80"
         }
+      ],
+      "aliases": [
+        "??",
+        "???",
+        "suzhou",
+        "suzhoubei",
+        "szb"
       ]
     },
     "shanghai": {
@@ -386,6 +447,14 @@
           "distance": "11 km",
           "image": "https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=500&q=80"
         }
+      ],
+      "aliases": [
+        "??",
+        "????",
+        "shanghai",
+        "shanghaihongqiao",
+        "shhq",
+        "AOH"
       ]
     },
     "shijiazhuang": {
@@ -420,6 +489,11 @@
           "distance": "3 km内",
           "image": "https://images.unsplash.com/photo-1566665797739-1674de7a421a?auto=format&fit=crop&w=500&q=80"
         }
+      ],
+      "aliases": [
+        "???",
+        "shijiazhuang",
+        "sjz"
       ]
     },
     "zhengzhou": {
@@ -454,6 +528,13 @@
           "distance": "3 km内",
           "image": "https://images.unsplash.com/photo-1566665797739-1674de7a421a?auto=format&fit=crop&w=500&q=80"
         }
+      ],
+      "aliases": [
+        "??",
+        "???",
+        "zhengzhou",
+        "zhengzhoudong",
+        "zzd"
       ]
     },
     "wuhan": {
@@ -495,6 +576,11 @@
           "distance": "3 km内",
           "image": "https://images.unsplash.com/photo-1566665797739-1674de7a421a?auto=format&fit=crop&w=500&q=80"
         }
+      ],
+      "aliases": [
+        "??",
+        "wuhan",
+        "wh"
       ]
     },
     "changsha": {
@@ -529,6 +615,13 @@
           "distance": "3 km内",
           "image": "https://images.unsplash.com/photo-1566665797739-1674de7a421a?auto=format&fit=crop&w=500&q=80"
         }
+      ],
+      "aliases": [
+        "??",
+        "???",
+        "changsha",
+        "changshanan",
+        "csn"
       ]
     },
     "guangzhou": {
@@ -563,6 +656,14 @@
           "distance": "3 km内",
           "image": "https://images.unsplash.com/photo-1566665797739-1674de7a421a?auto=format&fit=crop&w=500&q=80"
         }
+      ],
+      "aliases": [
+        "??",
+        "???",
+        "guangzhou",
+        "guangzhounan",
+        "gzn",
+        "IZQ"
       ]
     },
     "xian": {
@@ -604,6 +705,14 @@
           "distance": "3 km内",
           "image": "https://images.unsplash.com/photo-1566665797739-1674de7a421a?auto=format&fit=crop&w=500&q=80"
         }
+      ],
+      "aliases": [
+        "??",
+        "???",
+        "xian",
+        "xianbei",
+        "xab",
+        "EAY"
       ]
     },
     "hanzhong": {
@@ -645,6 +754,11 @@
           "distance": "3 km内",
           "image": "https://images.unsplash.com/photo-1566665797739-1674de7a421a?auto=format&fit=crop&w=500&q=80"
         }
+      ],
+      "aliases": [
+        "??",
+        "hanzhong",
+        "hz"
       ]
     },
     "guangyuan": {
@@ -679,6 +793,11 @@
           "distance": "3 km内",
           "image": "https://images.unsplash.com/photo-1566665797739-1674de7a421a?auto=format&fit=crop&w=500&q=80"
         }
+      ],
+      "aliases": [
+        "??",
+        "guangyuan",
+        "gy"
       ]
     },
     "chengdu": {
@@ -720,6 +839,14 @@
           "distance": "8 km",
           "image": "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=500&q=80"
         }
+      ],
+      "aliases": [
+        "??",
+        "???",
+        "chengdu",
+        "chengdudong",
+        "cdd",
+        "ICW"
       ]
     },
     "hangzhou": {
@@ -754,6 +881,13 @@
           "distance": "3 km内",
           "image": "https://images.unsplash.com/photo-1566665797739-1674de7a421a?auto=format&fit=crop&w=500&q=80"
         }
+      ],
+      "aliases": [
+        "??",
+        "???",
+        "hangzhou",
+        "hangzhoudong",
+        "hzd"
       ]
     },
     "nanchang": {
@@ -788,6 +922,13 @@
           "distance": "3 km内",
           "image": "https://images.unsplash.com/photo-1566665797739-1674de7a421a?auto=format&fit=crop&w=500&q=80"
         }
+      ],
+      "aliases": [
+        "??",
+        "???",
+        "nanchang",
+        "nanchangxi",
+        "ncx"
       ]
     },
     "guiyang": {
@@ -822,6 +963,13 @@
           "distance": "3 km内",
           "image": "https://images.unsplash.com/photo-1566665797739-1674de7a421a?auto=format&fit=crop&w=500&q=80"
         }
+      ],
+      "aliases": [
+        "??",
+        "???",
+        "guiyang",
+        "guiyangbei",
+        "gyb"
       ]
     },
     "kunming": {
@@ -863,6 +1011,14 @@
           "distance": "29 km",
           "image": "https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?auto=format&fit=crop&w=500&q=80"
         }
+      ],
+      "aliases": [
+        "??",
+        "???",
+        "kunming",
+        "kunmingnan",
+        "kmn",
+        "KOM"
       ]
     }
   }

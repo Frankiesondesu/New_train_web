@@ -285,6 +285,30 @@ function renderWelcome() {
             <span class="route-arrow">›</span>
           </button>`).join("")}
       </div>
+      <div class="panel-divider"></div>
+      <div class="section-heading"><h2>生成旅行路线</h2><span>轻量规划</span></div>
+      <div class="trip-planner">
+        <label>
+          <span>线路</span>
+          <select id="trip-route">
+            ${routes.map(route => `<option value="${route.id}">${route.shortName}</option>`).join("")}
+          </select>
+        </label>
+        <label>
+          <span>天数</span>
+          <input id="trip-days" type="number" min="1" max="7" value="3" />
+        </label>
+        <label>
+          <span>节奏</span>
+          <select id="trip-pace">
+            <option value="balanced">均衡</option>
+            <option value="fast">紧凑</option>
+            <option value="slow">慢游</option>
+          </select>
+        </label>
+        <button type="button" data-generate-trip>生成路线</button>
+        <div class="trip-output" id="trip-output"></div>
+      </div>
       <div class="hint-box">${icon("pointer")}<span>地图上的彩色线条代表铁路线路，圆点代表主要车站。车次时刻取自 ${dataSource.provider} ${dataSource.scheduleDate} 查询结果。</span></div>
     </div>`;
   bindPanelEvents();
@@ -385,6 +409,43 @@ function renderFavorites() {
   bindPanelEvents();
 }
 
+function pickTripStops(route, days, pace) {
+  const stationIds = route.stations;
+  const stopCount = Math.min(stationIds.length, Math.max(2, pace === "fast" ? days : days + 1));
+  if (stopCount >= stationIds.length) return stationIds;
+  return Array.from({ length: stopCount }, (_, index) => {
+    const position = Math.round(index * (stationIds.length - 1) / (stopCount - 1));
+    return stationIds[position];
+  });
+}
+
+function generateTripPlan() {
+  const route = routes.find(item => item.id === document.getElementById("trip-route")?.value) || routes[0];
+  const days = Math.min(7, Math.max(1, Number(document.getElementById("trip-days")?.value || 3)));
+  const pace = document.getElementById("trip-pace")?.value || "balanced";
+  const stops = pickTripStops(route, days, pace);
+  const train = route.trains[0];
+  const output = document.getElementById("trip-output");
+  if (!output) return;
+  output.innerHTML = `
+    <div class="trip-summary">
+      <b>${route.shortName} · ${days} 天${pace === "slow" ? "慢游" : pace === "fast" ? "紧凑" : "均衡"}路线</b>
+      <span>建议车次 ${train.no}：${train.from} ${train.depart} → ${train.to} ${train.arrive}</span>
+    </div>
+    <ol class="trip-days">
+      ${Array.from({ length: days }, (_, index) => {
+        const stationId = stops[Math.min(index, stops.length - 1)];
+        const station = stations[stationId];
+        const nextStation = stations[stops[Math.min(index + 1, stops.length - 1)]];
+        const focus = pace === "slow" ? "深度游览与休整" : pace === "fast" ? "快速打卡与转场" : "半日游览加顺路转场";
+        return `<li>
+          <b>第 ${index + 1} 天 · ${station.name.replace("站", "")}</b>
+          <span>${focus}${nextStation && nextStation !== station ? `，下一站可前往 ${nextStation.name.replace("站", "")}` : "，完成线路收尾"}。</span>
+        </li>`;
+      }).join("")}
+    </ol>`;
+}
+
 function trainCard(train) {
   return `<article class="train-card">
     <div class="train-top"><span class="train-number">${train.no}</span><span class="train-tag">${train.duration}</span></div>
@@ -424,6 +485,7 @@ function bindPanelEvents() {
   document.querySelectorAll("[data-favorite-kind]").forEach(button => {
     button.addEventListener("click", () => toggleFavorite(button.dataset.favoriteKind, button.dataset.favoriteId));
   });
+  document.querySelector("[data-generate-trip]")?.addEventListener("click", generateTripPlan);
   document.querySelector("[data-back]")?.addEventListener("click", () => {
     activeRouteId = null;
     activeStationId = null;

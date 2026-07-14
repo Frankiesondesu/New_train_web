@@ -1,0 +1,93 @@
+{
+  "routeId": "slow-61",
+  "trainCodes": "5609/5610",
+  "from": "重庆北",
+  "to": "秀山",
+  "railway": "渝怀铁路",
+  "source": {
+    "stops": "中国铁路12306于2026-07-14查询2026-07-15运行图；百度百科5609次列车、5610次列车和渝怀铁路条目用于线路性质与起讫站交叉核对。",
+    "coordinates": "OpenStreetMap铁路车站节点，经Overpass API于2026-07-14检索；坐标采用WGS84。",
+    "references": [
+      "https://baike.baidu.com/item/5609%E6%AC%A1%E5%88%97%E8%BD%A6/19241534",
+      "https://baike.baidu.com/item/5610%E6%AC%A1%E5%88%97%E8%BD%A6/19245101",
+      "https://baike.baidu.com/item/%E6%B8%9D%E6%80%80%E9%93%81%E8%B7%AF/7780258",
+      "https://www.12306.cn/",
+      "https://www.openstreetmap.org/copyright"
+    ]
+  },
+  "serviceNotes": [
+    "5609次由重庆北开往秀山，共停靠17站。",
+    "5610次由秀山开往重庆北，共停靠16站，不停靠高谷站。",
+    "时刻表会随铁路运行图调整，页面展示前应以乘车当日12306信息为准。"
+  ],
+  "services": [
+    {
+      "trainCode": "5609",
+      "from": "重庆北",
+      "to": "秀山",
+      "queryDate": "2026-07-15",
+      "stops": [
+        { "index": 1, "name": "重庆北", "arrive": null, "depart": "10:09" },
+        { "index": 2, "name": "洛碛", "arrive": "10:42", "depart": "10:47" },
+        { "index": 3, "name": "长寿", "arrive": "10:56", "depart": "10:59" },
+        { "index": 4, "name": "涪陵", "arrive": "11:40", "depart": "11:45" },
+        { "index": 5, "name": "白涛", "arrive": "12:02", "depart": "12:06" },
+        { "index": 6, "name": "武隆", "arrive": "12:54", "depart": "12:59" },
+        { "index": 7, "name": "中嘴", "arrive": "13:08", "depart": "13:33" },
+        { "index": 8, "name": "高谷", "arrive": "13:52", "depart": "13:55" },
+        { "index": 9, "name": "彭水", "arrive": "14:09", "depart": "14:12" },
+        { "index": 10, "name": "保家楼", "arrive": "14:22", "depart": "14:30" },
+        { "index": 11, "name": "郁山", "arrive": "14:41", "depart": "14:45" },
+        { "index": 12, "name": "黔江", "arrive": "15:23", "depart": "15:32" },
+        { "index": 13, "name": "鱼泉", "arrive": "15:57", "depart": "16:00" },
+        { "index": 14, "name": "泔溪", "arrive": "16:22", "depart": "16:30" },
+        { "index": 15, "name": "酉阳", "arrive": "16:52", "depart": "16:54" },
+        { "index": 16, "name": "龙池", "arrive": "17:14", "depart": "17:17" },
+        { "index": 17, "name": "秀山", "arrive": "17:32", "depart": null }
+      ]
+    },
+    {
+      "trainCode": "5610",
+      "from": "秀山",
+      "to": "重庆北",
+      "queryDate": "2026-07-15",
+      "stops": [
+        { "index": 1, "name": "秀山", "arrive": null, "depart": "10:33" },
+        { "index": 2, "name": "龙池", "arrive": "10:47", "depart": "10:49" },
+        { "index": 3, "name": "酉阳", "arrive": "11:08", "depart": "11:15" },
+        { "index": 4, "name": "泔溪", "arrive": "11:36", "depart": "11:39" },
+        { "index": 5, "name": "鱼泉", "arrive": "12:00", "depart": "12:16" },
+        { "index": 6, "name": "黔江", "arrive": "12:40", "depart": "12:49" },
+        { "index": 7, "name": "郁山", "arrive": "13:36", "depart": "13:39" },
+        { "index": 8, "name": "保家楼", "arrive": "13:48", "depart": "13:50" },
+        { "index": 9, "name": "彭水", "arrive": "14:00", "depart": "14:02" },
+        { "index": 10, "name": "中嘴", "arrive": "14:35", "depart": "14:37" },
+        { "index": 11, "name": "武隆", "arrive": "14:45", "depart": "14:49" },
+        { "index": 12, "name": "白涛", "arrive": "15:40", "depart": "15:43" },
+        { "index": 13, "name": "涪陵", "arrive": "16:00", "depart": "16:03" },
+        { "index": 14, "name": "长寿", "arrive": "16:57", "depart": "17:09" },
+        { "index": 15, "name": "洛碛", "arrive": "17:19", "depart": "17:22" },
+        { "index": 16, "name": "重庆北", "arrive": "18:04", "depart": null }
+      ]
+    }
+  ],
+  "stops": [
+    { "index": 1, "name": "重庆北", "arrive": null, "depart": "10:09", "lat": 29.6123216, "lng": 106.5472729, "coordinateStatus": "verified", "coordinateSource": "OpenStreetMap node 654769359" },
+    { "index": 2, "name": "洛碛", "arrive": "10:42", "depart": "10:47", "lat": 29.7247689, "lng": 106.9202596, "coordinateStatus": "verified", "coordinateSource": "OpenStreetMap node 5549291108" },
+    { "index": 3, "name": "长寿", "arrive": "10:56", "depart": "10:59", "lat": 29.7920134, "lng": 106.9621349, "coordinateStatus": "verified", "coordinateSource": "OpenStreetMap node 1681825052" },
+    { "index": 4, "name": "涪陵", "arrive": "11:40", "depart": "11:45", "lat": 29.702421, "lng": 107.3293137, "coordinateStatus": "verified", "coordinateSource": "OpenStreetMap node 1681825062" },
+    { "index": 5, "name": "白涛", "arrive": "12:02", "depart": "12:06", "lat": 29.5747369, "lng": 107.4655037, "coordinateStatus": "verified", "coordinateSource": "OpenStreetMap node 1681825045" },
+    { "index": 6, "name": "武隆", "arrive": "12:54", "depart": "12:59", "lat": 29.3299317, "lng": 107.7682632, "coordinateStatus": "verified", "coordinateSource": "OpenStreetMap node 4503846519" },
+    { "index": 7, "name": "中嘴", "arrive": "13:08", "depart": "13:33", "lat": 29.3059655, "lng": 107.8443502, "coordinateStatus": "verified", "coordinateSource": "OpenStreetMap node 1681825253" },
+    { "index": 8, "name": "高谷", "arrive": "13:52", "depart": "13:55", "lat": 29.3905302, "lng": 108.0683864, "coordinateStatus": "verified", "coordinateSource": "OpenStreetMap node 1681825082" },
+    { "index": 9, "name": "彭水", "arrive": "14:09", "depart": "14:12", "lat": 29.3647802, "lng": 108.2334316, "coordinateStatus": "verified", "coordinateSource": "OpenStreetMap node 5549317613" },
+    { "index": 10, "name": "保家楼", "arrive": "14:22", "depart": "14:30", "lat": 29.4277319, "lng": 108.3031941, "coordinateStatus": "verified", "coordinateSource": "OpenStreetMap node 2662698099" },
+    { "index": 11, "name": "郁山", "arrive": "14:41", "depart": "14:45", "lat": 29.5006159, "lng": 108.3585221, "coordinateStatus": "verified", "coordinateSource": "OpenStreetMap node 4584123482" },
+    { "index": 12, "name": "黔江", "arrive": "15:23", "depart": "15:32", "lat": 29.4441707, "lng": 108.7899045, "coordinateStatus": "verified", "coordinateSource": "OpenStreetMap node 1681825133" },
+    { "index": 13, "name": "鱼泉", "arrive": "15:57", "depart": "16:00", "lat": 29.1952038, "lng": 108.8484397, "coordinateStatus": "verified", "coordinateSource": "OpenStreetMap node 1681825197" },
+    { "index": 14, "name": "泔溪", "arrive": "16:22", "depart": "16:30", "lat": 28.987426, "lng": 108.9553024, "coordinateStatus": "verified", "coordinateSource": "OpenStreetMap node 1681825070" },
+    { "index": 15, "name": "酉阳", "arrive": "16:52", "depart": "16:54", "lat": 28.8115473, "lng": 108.9576347, "coordinateStatus": "verified", "coordinateSource": "OpenStreetMap node 1681825191" },
+    { "index": 16, "name": "龙池", "arrive": "17:14", "depart": "17:17", "lat": 28.6018735, "lng": 108.9925468, "coordinateStatus": "verified", "coordinateSource": "OpenStreetMap node 1681825098" },
+    { "index": 17, "name": "秀山", "arrive": "17:32", "depart": null, "lat": 28.4497561, "lng": 109.0111658, "coordinateStatus": "verified", "coordinateSource": "OpenStreetMap node 1681825182" }
+  ]
+}

@@ -613,12 +613,15 @@
     {
       "id": "slow-61",
       "trainCodes": "5609/5610",
-      "from": "???",
-      "to": "??",
-      "railway": "????",
-      "region": "??",
-      "category": "?????",
-      "note": "????????????????????????????????????"
+      "from": "重庆北",
+      "to": "秀山",
+      "railway": "渝怀铁路",
+      "region": "重庆",
+      "category": "公益慢火车",
+      "note": "往返重庆北与秀山，服务渝怀铁路沿线通勤、赶集、求学和探亲出行。",
+      "stopsFile": "stops/slow-61.json",
+      "stopCount": 17,
+      "coordinateCompleteness": "17/17"
     },
     {
       "id": "slow-62",
